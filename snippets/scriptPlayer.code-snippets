@@ -1,0 +1,280 @@
+// ZEP Script Snippets for ZEP Script Snippet Extension (ver. 0.0.1.)
+{
+	// ScriptPlayer - Field
+
+	"player.id": {
+		"prefix": "player.id",
+		"body": "player.id"
+	},
+	"player.name": {
+		"prefix": "player.name",
+		"body": [
+			"player.name = \"new name$1\"",
+			"// player.sendUpdated();"
+		]
+	},
+	"player.title": {
+		"prefix": "player.title",
+		"body": [
+			"player.title = \"new title$1\"",
+			"// player.sendUpdated();"
+		]
+	},
+	"player.tileX": {
+		"prefix": "player.tileX",
+		"body": "player.tileX"
+	},
+	"player.tileY": {
+		"prefix": "player.tileY",
+		"body": "player.tileY"
+	},
+	"player.dir": {
+		"prefix": "player.dir",
+		"body": "player.dir"
+	},
+	"player.moveSpeed": {
+		"prefix": "player.moveSpeed",
+		"body": [
+			"player.moveSpeed = 120$1 // default: 90",
+			"// player.sendUpdated();"
+		]
+	},
+	"player.sprite": {
+		"prefix": "player.sprite",
+		"body": [
+			"player.sprite = spriteName$1",
+			"// player.sendUpdated();"
+		]
+	},
+	"player.tag": {
+		"prefix": "player.tag",
+		"body": [
+			"player.tag = {",
+			"\tapp: null,$1",
+			"}",
+			"// player.sendUpdated();"
+		]
+	},
+	"player.hidden": {
+		"prefix": "player.hidden",
+		"body": [
+			"player.hidden = true$1; // default: false",
+			"// player.sendUpdated();"
+		]
+	},
+	"player.spotlight": {
+		"prefix": "player.spotlight",
+		"body": [
+			"player.spotlight = true$1; // default: false",
+			"// player.sendUpdated();"
+		]
+	},
+	"player.disableVideo": {
+		"prefix": "player.disableVideo",
+		"body": "player.disableVideo"
+	},
+	"player.disableAudio": {
+		"prefix": "player.disableAudio",
+		"body": "player.disableAudio"
+	},
+	"player.attackType": {
+		"prefix": "player.attackType",
+		"body": [
+			"player.attackType = 2$1; // 0: default attack type, 2: ranged attack type",
+			"// player.sendUpdated();"
+		]
+	},
+	"player.attackParam1": {
+		"prefix": "player.attackParam1",
+		"body": [
+			"player.attackParam1 = 10$1; // default: 1",
+			"// player.sendUpdated();"
+		]
+	},
+	"player.attackParam2": {
+		"prefix": "player.attackParam2",
+		"body": [
+			"player.attackType = 2$1;",
+			"player.attackParam2 = 5$2;",
+			"// player.sendUpdated();"
+		]
+	},
+	"player.attackSprite": {
+		"prefix": "player.attackSprite",
+		"body": [
+			"player.attackSprite = spriteName$1;",
+			"// player.sendUpdated();"
+		]
+	},
+	"player.walletAddress": {
+		"prefix": "player.walletAddress",
+		"body": "player.walletAddress"
+	},
+	"player.storage": {
+		"prefix": "player.storage",
+		"body": [
+			"player.storage = JSON.stringify(data$1);",
+			"// player.save();"
+		]
+	},
+	"player.isMobile": {
+		"prefix": "player.isMobile",
+		"body": "player.isMobile"
+	},
+	"player.isMoving": {
+		"prefix": "player.isMoving",
+		"body": "player.isMoving"
+	},
+	"player.isJumping": {
+		"prefix": "player.isJumping",
+		"body": "player.isJumping"
+	},
+	"player.customData": {
+		"prefix": "player.customData",
+		"body": "player.customData"
+	},
+	"player.displayRatio": {
+		"prefix": "player.displayRatio",
+		"body": [
+			"player.displayRatio = 0.8; // default: 1",
+			"// player.sendUpdated();"
+		]
+	},
+	"player.titleColor": {
+		"prefix": "player.titleColor",
+		"body": [
+			"// WHITE, BLACK, RED, GREEN, BLUE, ORANGE, PURPLE, GRAY, YELLOW, MAGENTA, CYAN",
+			"player.titleColor = ColorType.WHITE; // or: player.titleColor = 0xFFFFFF;",
+			"player.sendUpdated();"
+		]
+	},
+	"player.emailHash": {
+		"prefix": "player.emailHash",
+		"body": "player.emailHash"
+	},
+	"player.isGuest": {
+		"prefix": "player.isGuest",
+		"body": "player.isGuest"
+	},
+
+	// ScriptPlayer - Methods / UI
+
+	"player.showCenterLabel": {
+		"prefix": "player.showCenterLabel",
+		"body": "player.showCenterLabel(\"text$1\", 0xFFFFFF$2, 0x000000, 0, 3000$3);"
+	},
+	"player.showCustomLabel": {
+		"prefix": "player.customLabel",
+		"body": "player.showCustomLabel(\"text$1\", 0xFFFFFF$2, 0x000000, 0, 100, 0.6, 3000$3);"
+	},
+	"player.showWidget": {
+		"prefix": "player.showWidget",
+		"body": [
+			"// align value: 'popup', 'sidebar', 'top', 'topleft', 'topright', 'middle', 'middleleft', 'middleright', 'bottom', 'bottomleft', 'bottomright'",
+			"player.showWidget(\"myHtml$1.html\", 'sidebar$2', appWidth$3, appHeight$4);"
+		]
+	},
+	"player.showYoutubeWidget": {
+		"prefix": "player.showYoutubeWidget",
+		"body": [
+			"// align value: 'popup', 'sidebar', 'top', 'topleft', 'topright', 'middle', 'middleleft', 'middleright', 'bottom', 'bottomleft', 'bottomright'",
+			"player.showYoutubeWidget(\"https://www.youtube.com/watch?v=WMxGnU5j4Hw$1\", 'sidebar$2', appWidth$3, appHeight$4);"
+		]
+	},
+	"player.sendMessage": {
+		"prefix": "player.sendMessage",
+		"body": "player.sendMessage(\"text$1\", 0xFFFFFF);"
+	},
+	"player.showPrompt": {
+		"prefix": "player.showPrompt",
+		"body": [
+			"player.showPrompt(\"text$1\", function(inputText){",
+			"\tswitch (inputText) {",
+			"\t\tcase \"condition$2\" :",
+			"\t\t\t//...$3",
+			"\t\t\tbreak;",
+			"\t\tdefault :",
+			"\t\t\t//...$4",
+			"\t\t\tbreak;",
+			"\t}$5",
+			"});"
+		]
+	},
+	"player.showConfirm": {
+		"prefix": "player.showConfirm",
+		"body": [
+			"player.showConfirm(\"text$1\", function(result){",
+			"\t$2",
+			"});"
+		]
+	},
+	"player.showAlert": {
+		"prefix": "player.showAlert",
+		"body": [
+			"player.showAlert(\"text$1\", function(){",
+			"\t$2",
+			"});"
+		]
+	},
+
+	// ScriptPlayer - Methods / Data Load
+
+	"player.isEmail": {
+		"prefix": "player.isEmail",
+		"body": "player.isEmail(\"email@domain.com$1\");"
+	},
+	"player.getLocationName": {
+		"prefix": "player.getLocationName",
+		"body": "player.getLocationName();"
+	},
+
+	// ScriptPlayer - Methods / User Control
+
+	"player.spawnAt": {
+		"prefix": "player.spawnAt",
+		"body": [
+			"// 3rd parameter - direction / 1: Left, 2: Up, 3: Right, 4: Down, 5: Top-Left, 6: Bottom-Left, 7: Top-Right, 8: Bottom-Right",
+			"player.spawnAt(tileX$1, tileY$2, 0$3);"
+		]
+	},
+	"player.spawnAtLocation": {
+		"prefix": "player.spawnAtLocation",
+		"body": [
+			"// 2nd parameter - direction / 1: Left, 2: Up, 3: Right, 4: Down, 5: Top-Left, 6: Bottom-Left, 7: Top-Right, 8: Bottom-Right",
+			"player.spawnAtLocation(\"locationName$1\", 0$2);"
+		]
+	},
+	"player.spawnAtMap": {
+		"prefix": "player.spawnAtMap",
+		"body": "player.spawnAtMap(spaceHashID$1, mapHashID$2)"
+	},
+
+	// ScriptPlayer - Methods / Sound
+	
+	"player.playSound": {
+		"prefix": "player.playSound",
+		"body": [
+			"// 2nd parameter - loop / true: play on repeat, false: play once / default: false",
+			"// 3rd parameter - overlap / true: can overlap with others, false: CANNOT overlap with others / default: false",
+			"player.playSound(\"mySound$1.wav\", false, false);"
+		]
+	},
+	"player.playSoundLink": {
+		"prefix": "player.playSoundLink",
+		"body": [
+			"// 2nd parameter - loop / true: play on repeat, false: play once / default: false",
+			"player.playSoundLink(\"https://zep.us/assets/sounds/ring.mp3$1\", false);"
+		]
+	},
+	
+	// ScriptPlayer - Methods / Common
+	
+	"player.sendUpdated": {
+		"prefix": "player.sendUpdated",
+		"body": "player.sendUpdated();"
+	},
+	"player.save": {
+		"prefix": "player.save",
+		"body": "player.save();"
+	}
+}

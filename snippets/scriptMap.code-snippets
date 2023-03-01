@@ -1,0 +1,109 @@
+// ZEP Script Snippets for ZEP Script Snippet Extension (ver. 0.0.1.)
+{
+	// ScriptMap - Field
+	
+	"Map.width": {
+		"prefix": "Map.width",
+		"body": "Map.width"
+	},
+	"Map.height": {
+		"prefix": "Map.height",
+		"body": "Map.height"
+	},
+	
+	// ScriptMap - Methods
+	
+	"App.putTileEffect": {
+		"prefix": "Map.putTileEffect",
+		"body": [
+			"// NONE: no effect / delete tile effect",
+			"// IMPASSABLE: players cannot pass",
+			"// SPAWN: players spawn here",
+			"// SPOTLIGHT: designates a spotlight area",
+			"// PORTAL: move players to a different location",
+			"// SPACE_PORTAL: a portal to another Space",
+			"// EMBED: adds a web link",
+			"// WEB_PORTAL: a web portal",
+			"// TILE_EMBED: embeds something from the web",
+			"// PRIVATE_AREA: designates a private discussion area",
+			"// LOCATION: designated area for ZEP script",
+			"// AMBIENT_SOUND: sets background sounds",
+			"Map.putTileEffect(x$1, y$2, TileEffectType.NONE$3);"
+		]
+	},
+	"Map.putObject": {
+		"prefix": "Map.putObject",
+		"body": "Map.putObject(x$1, y$2, spriteName$3, {overlap : true$4});"
+	},
+	"Map.playObjectAnimation": {
+		"prefix": "Map.playObjectAnimation",
+		"body": "Map.playObjectAnimation(x$1, y$2, `#${spriteName$3.id}`);"
+	},
+	"Map.moveObject": {
+		"prefix": "Map.moveObject",
+		"body": "Map.moveObject(x$1, y$2, targetX$3, targetY$4, timeSeconds$5);"
+	},
+	"Map.putObjectWithKey": {
+		"prefix": "Map.putObjectWithKey",
+		"body": [
+			"Map.putObjectWithKey(x$1, y$2, spriteName$3, {",
+			"\toverlap: true$4,",
+			"\tmoveSpeed: 90$5, // default: 90",
+			"\tkey: \"obejctKeyName$6\"",
+			"});"
+		]
+	},
+	"Map.getObjectWithKey": {
+		"prefix": "Map.getObjectWithKey",
+		"body": "Map.getObjectWithKey(\"obejctKeyName$1\");"
+	},
+	"Map.playObjectAnimationWithKey": {
+		"prefix": "Map.playObjectAnimationWithKey",
+		"body": [
+			"// 3rd parameter - loop / -1: infinite loop",
+			"Map.playObjectAnimationWithKey(\"obejctKeyName$1\", \"dance\"$2, 0$3);"
+		]
+	},
+	"Map.moveObjectWithKey": {
+		"prefix": "Map.moveObjectWithKey",
+		"body": [
+			"// 4th parameter - usePath / true: CANNOT pass an impassable tile, false: can pass an impassable tile",
+			"Map.moveObjectWithKey(\"obejctKeyName$1\", targetX$2, targetY$3, true);"
+		]
+	},
+	"Map.clearAllObjects": {
+		"prefix": "Map.clearAllObjects",
+		"body": "Map.clearAllObjects();"
+	},
+	"Map.getTile": {
+		"prefix": "Map.getTile",
+		"body": [
+			"// 1st parameter - layerID / 0: Floor, 1: Wall, 2: TileEffect, 3: Object, 5: TopObject",
+			"Map.getTile(2$1, x$2, y$3);"
+		]
+	},
+	"Map.hasLocation": {
+		"prefix": "Map.hasLocation",
+		"body": "Map.hasLocation(\"locationName$1\")"
+	},
+	"Map.getObjectsByType": {
+		"prefix": "Map.getObjectsByType",
+		"body": [
+			"// 0: NONE, 1: SHOW_NOTE, 2: SHOW_IMAGE, 3: PASSWORD_DOOR, 4: LINK_WEBSITE, 5: EMBED_WEBSITE",
+			"// 6: API_CALL, 7: REPLACE_IMAGE, 8: NFT_GIVEAWAY, 9: NFT_DOOR, 10: POST_MESSAGE",
+			"// 11: SHOW_CHAT_BALLOON, 12: FT_DOOR, 13: POST_MESSAGE_TO_APP, 14: DONATION_DOOR, 15: IMPASSABLE",
+			"// 16: INTERACTION_WITH_ZEPSCRIPTS, 17: TOKEN_DONATION_DOOR, 18: CHANGE_OBJECT, 19: ANIMATION",
+			"Map.getObjectsByType(0$1);"
+		]
+	},
+	"Map.getTopObjectsByType": {
+		"prefix": "Map.getTopObjectsByType",
+		"body": [
+			"// 0: NONE, 1: SHOW_NOTE, 2: SHOW_IMAGE, 3: PASSWORD_DOOR, 4: LINK_WEBSITE, 5: EMBED_WEBSITE",
+			"// 6: API_CALL, 7: REPLACE_IMAGE, 8: NFT_GIVEAWAY, 9: NFT_DOOR, 10: POST_MESSAGE",
+			"// 11: SHOW_CHAT_BALLOON, 12: FT_DOOR, 13: POST_MESSAGE_TO_APP, 14: DONATION_DOOR, 15: IMPASSABLE",
+			"// 16: INTERACTION_WITH_ZEPSCRIPTS, 17: TOKEN_DONATION_DOOR, 18: CHANGE_OBJECT, 19: ANIMATION",
+			"Map.getTopObjectsByType(0$1);"
+		]
+	}
+}

@@ -1,0 +1,277 @@
+// ZEP Script Snippets for ZEP Script Snippet Extension (ver. 0.0.1.)
+{
+	// Frequently Used Syntax/Functions
+
+	"forAllPlayers": {
+		"prefix": "ZSforAllPlayers",
+		"body": [
+			"for (let p of players) {",
+			"\t$1",
+			"}"
+		]
+	},
+	"tagControl": {
+		"prefix": "ZStagControl",
+		"body": [
+			"let tag = player.tag;",
+			"",
+			"tag.property$1 = value$2;",
+			"",
+			"player.tag = tag;",
+			"player.sendUpdated();"
+		]
+	},
+	"initTag": {
+		"prefix": "ZSinitTag",
+		"body": [
+			"App.onJoinPlayer.Add(function(player){",
+			"\tinitTag(player);",
+			"});",
+			"",
+			"function initTag(player) {",
+			"\tplayer.tag = {",
+			"\t\tapp : null,",
+			"\t\tstringValue : \"value\",",
+			"\t\tcustomAuth : false,",
+			"\t\tcustomRole : 0,",
+			"\t};",
+			"\tplayer.sendUpdated();",
+			"}"
+		]
+	},
+	"loadTag": {
+		"prefix": "ZSloadTag",
+		"body": [
+			"App.onJoinPlayer.Add(function(player){",
+			"\tloadTag(player);",
+			"});",
+			"",
+			"function loadTag(player) {",
+			"\tif (!player.storage) {",
+			"\t\tinitTag(player);",
+			"\t} else {",
+			"\t\tplayer.tag = JSON.parse(player.storage);",
+			"\t\tplayer.sendUpdated();",
+			"\t}",
+			"}",
+			"function initTag(player) {",
+			"\tplayer.tag = {",
+			"\t\tapp : null,",
+			"\t\tstringValue : \"value\",",
+			"\t\tcustomAuth : false,",
+			"\t\tcustomRole : 0,",
+			"\t};",
+			"\tplayer.sendUpdated();",
+			"}"
+		]
+	},
+	"saveTag": {
+		"prefix": "ZSsaveTag",
+		"body": [
+			"App.onLeavePlayer.Add(function(player){",
+			"\tsaveTag(player);",
+			"});",
+			"",
+			"function saveTag(player) {",
+			"\tplayer.storage = JSON.stringify(player.tag);",
+			"\tplayer.save();",
+			"}"
+		]
+	},
+	"checkCustomData": {
+		"prefix": "ZScheckCustomData",
+		"body": [
+			"App.onJoinPlayer.Add(function(player){",
+			"\tcheckCutomData(player);",
+			"});",
+			"function checkCutomData(player){",
+			"\tif (!player.customData) return;",
+			"\tlet playerCustomData = JSON.parse(player.customData);",
+			"\tif (playerCustomData.hasOwnProperty(\"name\")) {",
+			"\t\tplayer.name = playerCustomData[\"name\"];",
+			"\t}",
+			"\tplayer.sendUpdated();",
+			"}"
+		]
+	},
+	"roleString": {
+		"prefix": "ZSroleString",
+		"body": [
+			"function roleString(player){",
+			"\tconst ROLE = {",
+			"\t\t\"-1\": \"GUEST\",",
+			"\t\t\"0\": \"GUEST\",",
+			"\t\t\"1000\": \"EDITOR\",",
+			"\t\t\"2000\": \"STAFF\",",
+			"\t\t\"3000\": \"ADMIN\",",
+			"\t\t\"3001\": \"OWNER\",",
+			"\t}",
+			"\treturn ROLE[player.role];",
+			"}"
+		]
+	},
+	"isStaff": {
+		"prefix": "ZSisStaff",
+		"body": [
+			"function isStaff(player){",
+			"\tif (player.role < 1000) return false;",
+			"\treturn true;",
+			"}"
+		]
+	},
+	"isInEmailList": {
+		"prefix": "ZSisInEmailList",
+		"body": [
+			"const EMAIL_AUTH_LIST = [",
+			"\t\"email01@domain.com\",",
+			"\t\"email02@domain.com\",",
+			"\t\"email03@domain.com\",",
+			"\t// ...",
+			"];",
+			"function isInEmailList(player){",
+			"\tfor (let i in EMAIL_AUTH_LIST){",
+			"\t\tlet email = EMAIL_AUTH_LIST[i];",
+			"\t\tif (player.isEmail(email)) return true;",
+			"\t}",
+			"\treturn false;",
+			"}"
+		]
+	},
+	"closeApp": {
+		"prefix": "ZScloseApp",
+		"body": [
+			"function closeApp(player){",
+			"\tplayer.tag.app.destroy();",
+			"\tplayer.tag.app = null;",
+			"\tplayer.sendUpdate();",
+			"}"
+		]
+	},
+	"openApp": {
+		"prefix": "ZSopenApp",
+		"body": [
+			"function openApp(player){",
+			"\tplayer.tag.app = player.showWidget(\"myHtml.html\", 'sidebar', appWidth, appHeight);",
+			"\tplayer.tag.app.sendMessage({",
+			"\t\ttype: \"init\",",
+			"\t})",
+			"\tplayer.sendUpdate();",
+			"}"
+		]
+	},
+	"debugCommand": {
+		"prefix": "ZSdebugCommand",
+		"body": [
+			"const APP_DEBUG_KEYWORD = {",
+			"\tkeywordA : \"A\",",
+			"\tkeywordB : \"B\",",
+			"\tkeywordC : \"C\",",
+			"};",
+			"",
+			"App.onSay.Add(function(player, text) {",
+			"\tif (!text.startsWith(\"!\") || text == \"!\") return;",
+			"",
+			"\tconst SEPARATOR = \" \";",
+			"\tlet command = text.split(SEPARATOR)[0];",
+			"\tlet paramString = text.slice(command.length + 1);",
+			"\tlet param = paramStr.split(SEPARATOR);",
+			"",
+			"\tswitch (command) {",
+			"\t\tcase APP_DEBUG_KEYWORD.keywordA :",
+			"\t\t\t// atKeywordA(param[0]);",
+			"\t\t\tbreak;",
+			"\t\tcase APP_DEBUG_KEYWORD.keywordB :",
+			"\t\t\t// atKeywordB(param[0], param[1]);",
+			"\t\t\tbreak;",
+			"\t\tcase APP_DEBUG_KEYWORD.keywordC :",
+			"\t\t\t// atKeywordC(paramStr);",
+			"\t\t\tbreak;",
+			"\t}",
+			"});"
+		]
+	},
+	"timeConstant": {
+		"prefix": "ZStimeConstant",
+		"body": [
+			"const HOUR_PER_DAY = 24;",
+			"const MIN_PER_HOUR = 60;",
+			"const SEC_PER_MIN = 60;",
+			"const MS_PER_SEC = 1000;"
+		]
+	},
+	"timer": {
+		"prefix": "ZStimer",
+		"body": [
+			"const INIT_TIMER = 300;",
+			"let timer;",
+			"",
+			"const PERIOD_SECONDS = 1;",
+			"let periodTimer = 0;",
+			"",
+			"let isTimerOn = false;",
+			"let isTimerPaused = false;",
+			"let hasTimerFinished = false;",
+			"",
+			"initTimer();",
+			"",
+			"function initTimer() {",
+			"\ttimer = init_timer;",
+			"",
+			"\tsecondTimer = 0;",
+			"",
+			"\tisTimerPaused = false;",
+			"\thasTimerFinished = false;",
+			"}",
+			"",
+			"function startTimer() {",
+			"\tisTimerOn = true;",
+			"\tisTimerPaused = false;",
+			"\thasTimerFinished = false;",
+			"}",
+			"",
+			"function pauseTimer() {",
+			"\tisTimerOn = false;",
+			"\tisTimerPaused = true;",
+			"}",
+			"",
+			"function endTimer() {",
+			"\tisTimerOn = false;",
+			"\thasTimerFinished = true;",
+			"}",
+			"",
+			"function inEveryPeriod() {",
+			"\t//...",
+			"}",
+			"",
+			"App.onUpdate.Add(function(dt){",
+			"\tif (!isTimerOn) return;",
+			"",
+			"\ttimer -= dt;",
+			"",
+			"\tif (timer <= 0) {",
+			"\t\tendTimer();",
+			"\t\treturn; ",
+			"\t}",
+			"\t",
+			"\tperiodTimer += dt;",
+			"",
+			"\tif (periodTimer >= PERIOD_SECONDS) {",
+			"\t\tinEveryPeriod();",
+			"\t\tperiodTimer = 0;",
+			"\t}",
+			"});"
+		]
+	},
+	"initAppStorage": {
+		"prefix": "ZSinitAppStorage",
+		"body": [
+			"function initAppStorage() {",
+			"\tobj = {",
+			"\t\tversion : \"1.0.0.\",",
+			"\t\tranking : [],",
+			"\t}",
+			"\tApp.setStorage(JSON.stringify(obj));",
+			"}"
+		]
+	},
+}

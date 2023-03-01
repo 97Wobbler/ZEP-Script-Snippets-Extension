@@ -1,0 +1,364 @@
+// ZEP Script Snippets for ZEP Script Snippet Extension (ver. 0.0.1.)
+{
+	// ScriptApp - LifeCycle
+	
+	"App.onInit": {
+		"prefix": "App.onInit",
+		"body": [
+			"App.onInit.Add(function(){",
+			"\t$1",
+			"});",
+		]
+	},
+	"App.onJoinPlayer": {
+		"prefix": "App.onJoinPlayer",
+		"body": [
+			"App.onJoinPlayer.Add(function(player){",
+			"\t$1",
+			"});"
+		]
+	},
+	"App.onStart": {
+		"prefix": "App.onStart",
+		"body": [
+			"App.onStart.Add(function(){",
+			"\t$1",
+			"});"
+		]
+	},
+	"App.onUpdate": {
+		"prefix": "App.onUpdate",
+		"body": [
+			"App.onUpdate.Add(function(dt){",
+			"\t$1",
+			"});"
+		]
+	},
+	"App.onLeavePlayer": {
+		"prefix": "App.onLeavePlayer",
+		"body": [
+			"App.onLeavePlayer.Add(function(player){",
+			"\t$1",
+			"});"
+		]
+	},
+	"App.onDestroy": {
+		"prefix": "App.onDestroy",
+		"body": [
+			"App.onDestroy.Add(function(){",
+			"\t$1",
+			"});"
+		]
+	},
+	
+	// ScriptApp - Field
+	
+	"App.spaceHashID": {
+		"prefix": "App.spaceHashID",
+		"body": "const SPACE_HASHID = App.spaceHashID;"
+	},
+	"App.mapHashID": {
+		"prefix": "App.mapHashID",
+		"body": "const MAP_HASHID = App.mapHashID;"
+	},
+	"App.creatorID": {
+		"prefix": "App.creatorID",
+		"body": "const CREATOR_ID = App.creatorID"
+	},
+	"App.players": {
+		"prefix": "App.players",
+		"body": "let players = App.players;"
+	},
+	"App.playerCount": {
+		"prefix": "App.playerCount",
+		"body": "App.playerCount"
+	},
+	"App.cameraEffect": {
+		"prefix": "App.cameraEffect",
+		"body": [
+			"App.cameraEffect = 1$1; // 0: NONE, 1 : VIGNETTING",
+			"App.cameraEffectParam1 = 500$2;",
+			"// App.sendUpdated();"
+		]
+	},
+	"App.displayRatio": {
+		"prefix": "App.displayRatio",
+		"body": [
+			"App.displayRatio = 0.8$1; // default: 1",
+			"// App.sendUpdated();"
+		]
+	},
+	"App.storage": {
+		"prefix": "App.storage",
+		"body": "App.storage"
+	},
+	"App.followPlayer": {
+		"prefix": "App.followPlayer",
+		"body": [
+			"App.followPlayer = true; // default: true",
+			"// App.sendUpdated();"
+		]
+	},
+	"App.showName": {
+		"prefix": "App.showName",
+		"body": [
+			"App.showName = false; // default: true",
+			"// App.sendUpdated();"
+		]
+	},
+	"App.appHashID": {
+		"prefix": "App.appHashID",
+		"body": "const APP_HASHID = App.appHashID;"
+	},
+
+	// ScriptApp - Event Listeners
+	
+	"App.onSay": {
+		"prefix": "App.onSay",
+		"body": [
+			"App.onSay.Add(function(player, text){",
+			"\t$1",
+			"});"
+		]
+	},
+	"App.onPlayerTouched": {
+		"prefix": "App.onPlayerTouched",
+		"body": [
+			"App.onPlayerTouched.Add(function(sender, target, x, y){",
+			"\t$1",
+			"});"
+		]
+	},
+	"App.onObjectTouched": {
+		"prefix": "App.onObjectTouched",
+		"body": [
+			"App.onObjectTouched.Add(function(sender, x, y, tileID, obj){",
+			"\t// let value = obj.param1; // value from a ZEP Script Interaction Object.",
+			"\t$1",
+			"});"
+		]
+	},
+	"App.onAppObjectTouched": {
+		"prefix": "App.onAppObjectTouched",
+		"body": [
+			"App.onAppObjectTouched.Add(function(sender, key, x, y){",
+			"\t$1",
+			"});"
+		]
+	},
+	"App.onUnitAttacked": {
+		"prefix": "App.onUnitAttacked",
+		"body": [
+			"App.onUnitAttacked.Add(function(sender, x, y, target){",
+			"\t$1",
+			"});"
+		]
+	},
+	"App.onObjectAttacked": {
+		"prefix": "App.onObjectAttacked",
+		"body": [
+			"App.onObjectAttacked.Add(function(sender, x, y){",
+			"\t$1",
+			"});"
+		]
+	},
+	"App.onSidebarTouched": {
+		"prefix": "App.onSidebarTouched",
+		"body": [
+			"App.onSidebarTouched.Add(function(player){",
+			"\t$1",
+			"});"
+		]
+	},
+	"App.onTriggerObject": {
+		"prefix": "App.onTriggerObject",
+		"body": [
+			"App.onTriggerObject.Add(function(player, layerID, x, y){",
+			"\t$1",
+			"});"
+		]
+	},
+
+	// ScriptApp - Callbacks
+	
+	"App.runLater": {
+		"prefix": "App.runLater",
+		"body": [
+			"App.runLater(function(){",
+			"\t$1",
+			"}, 3$2);"
+		]
+	},
+	"App.addOnLocationTouched": {
+		"prefix": "App.addOnLocationTouched",
+		"body": [
+			"App.addOnLocationTouched(\"locationName$1\", function(player){",
+			"\t$2",
+			"});"
+		]
+	},
+	"App.addOnKeyDown": {
+		"prefix": "App.addOnKeyDown",
+		"body": [
+			"// A: 65, B: 66, C: 67, D: 68, E: 69, F: 70, G: 71, H: 72, I: 73, J: 74",
+			"// K: 75, L: 76, M: 77, N: 78, O: 79, P: 80, Q: 81, R: 82, S: 83, T: 84",
+			"// U: 85, V: 86, W: 87, X: 88, Y: 89, Z: 90",
+			"",
+			"App.addOnKeyDown(65$1 , function(player){",
+			"\t$2",
+			"});"
+		]
+	},
+	"App.addMobileButton": {
+		"prefix": "App.addMobileButton",
+		"body": [
+			"// 0: TOP, 1: TOP_LEFT, 2: TOP_RIGHT, 3: MIDDLE, 4: MIDDLE_LEFT",
+			"// 5: MIDDLE_RIGHT, 6: BOTTOM, 7: BOTTOM_LEFT, 8: BOTTOM_RIGHT",
+			"App.addMobileButton(7$1, offsetX$2, offsetY$3, function(player){",
+			"\t$4",
+			"});",
+		]
+	},
+	"App.putMobilePunch": {
+		"prefix": "App.putMobilePunch",
+		"body": "App.putMobilePunch(false); // true: show, false: hide"
+	},
+
+	// ScriptApp - Methods / UI
+
+	"App.loadSpritesheet": {
+		"prefix": "App.loadSpritesheet",
+		"body": [
+			"const AVATAR_ANIMS = {",
+			"\tdown_idle: [0], down: [1, 2, 3, 4], down_jump: [28],",
+			"\tleft_idle: [5], left: [6, 7, 8, 9], left_jump: [29],",
+			"\tright_idle: [10], right: [11, 12, 13, 14], right_jump: [30],",
+			"\tup_idle: [15], up: [16, 17, 18, 19], up_jump: [31],",
+			"\tdance: [20, 21, 22, 23, 24, 25, 26, 27]",
+			"};",
+			"",
+			"App.loadSpritesheet(\"myImg$1.png\", 48$2, 64$3, AVATAR_ANIMS, 8);"
+		]
+	},
+	"App.showCenterLabel": {
+		"prefix": "App.showCenterLabel",
+		"body": "App.showCenterLabel(\"text$1\", 0xFFFFFF$2, 0x000000, 0, 3000$3);"
+	},
+	"App.showCustomLabel": {
+		"prefix": "App.customLabel",
+		"body": "App.showCustomLabel(\"text$1\", 0xFFFFFF$2, 0x000000, 0, 100, 0.6, 3000$3);"
+	},
+	"App.sayToAll": {
+		"prefix": "App.sayToAll",
+		"body": "App.sayToAll(\"text$1\", 0xFFFFFF);"
+	},
+	"App.showWidget": {
+		"prefix": "App.showWidget",
+		"body": [
+			"// align value: 'popup', 'sidebar', 'top', 'topleft', 'topright', 'middle', 'middleleft', 'middleright', 'bottom', 'bottomleft', 'bottomright'",
+			"App.showWidget(\"myHtml$1.html\", 'sidebar$2', appWidth$3, appHeight$4);"
+		]
+	},
+	"App.showYoutubeWidget": {
+		"prefix": "App.showYoutubeWidget",
+		"body": [
+			"// align value: 'popup', 'sidebar', 'top', 'topleft', 'topright', 'middle', 'middleleft', 'middleright', 'bottom', 'bottomleft', 'bottomright'",
+			"App.showYoutubeWidget(\"https://www.youtube.com/watch?v=WMxGnU5j4Hw$1\", 'sidebar$2', appWidth$3, appHeight$4);"
+		]
+	},
+
+	// ScriptApp - Methods / User Control
+	
+	"App.spawnPlayer": {
+		"prefix": "App.spawnPlayer",
+		"body": "App.spawnPlayer(targetPlayer$1.id, x$2, y$3);"
+	},
+	"App.kickPlayer": {
+		"prefix": "App.kickPlayer",
+		"body": "App.kickPlayer(targetPlayer$1.id);"
+	},
+	"App.forceDestroy": {
+		"prefix": "App.forceDestroy",
+		"body": "App.forceDestroy();"
+	},
+	"App.clearChat": {
+		"prefix": "App.clearChat",
+		"body": "App.clearChat();"
+	},
+	
+	// ScriptApp - Methods / Sound
+	
+	"App.playSound": {
+		"prefix": "App.playSound",
+		"body": [
+			"// 2nd parameter - loop / true: play on repeat, false: play once / default: false",
+			"// 3rd parameter - overlap / true: can overlap with others, false: CANNOT overlap with others / default: false",
+			"App.playSound(\"mySound$1.wav\", false, false);"
+		]
+	},
+	"App.playSoundLink": {
+		"prefix": "App.playSoundLink",
+		"body": [
+			"// 2nd parameter - loop / true: play on repeat, false: play once / default: false",
+			"App.playSoundLink(\"https://zep.us/assets/sounds/ring.mp3$1\", false);"
+		]
+	},
+	"App.stopSound": {
+		"prefix": "App.stopSound",
+		"body": "App.stopSound();"
+	},
+
+	// ScriptApp - Methods / Communication
+
+	"App.httpGet": {
+		"prefix": "App.httpGet",
+		"body": [
+			"App.httpGet(url, headers, function(res){",
+			"\tlet response$1 = JSON.parse(res);",
+			"\t$2",
+			"});"
+		]
+	},
+	"App.httpPost": {
+		"prefix": "App.httpPost",
+		"body": [
+			"App.httpPost(url, headers, body, function(res){",
+			"\tlet response$1 = JSON.parse(res);",
+			"\t$2",
+			"});"
+		]
+	},
+	"App.httpPostJson": {
+		"prefix": "App.httpPostJson",
+		"body": [
+			"App.httpPostJson(url, headers, body, function(res){",
+			"\tlet response$1 = JSON.parse(res);",
+			"\t$2",
+			"});"
+		]
+	},
+
+	// ScriptApp - Methods / Common
+
+	"App.sendUpdated": {
+		"prefix": "App.sendUpdated",
+		"body": "App.sendUpdated();"
+	},
+	"App.save": {
+		"prefix": "App.save",
+		"body": "App.save(); // DEPRECATED!"
+	},
+	"App.setStroage": {
+		"prefix": "App.setStroage",
+		"body": "App.setStroage(JSON.stringify(variableName$1));"
+	},
+	"App.getStorage": {
+		"prefix": "App.getStorage",
+		"body": [
+			"App.getStorage(function(",
+			"\tlet appStorage = JSON.parse(App.storage);",
+			"\t$1",
+			"));"
+		]
+	}
+}

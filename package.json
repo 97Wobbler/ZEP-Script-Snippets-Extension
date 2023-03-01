@@ -1,0 +1,42 @@
+{
+  "name": "zep-script-snippets",
+  "displayName": "ZEP Script Snippets",
+  "description": "ZEP Script snippet generator",
+  "version": "0.0.1",
+  "publisher": "97wobbler",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/97Wobbler/ZEP-Script-Snippets-Extension"
+  },
+  "icon": "icon.png",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "javascript",
+        "path": "./snippets/frequentlyUsedSyntax.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/scriptApp.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/scriptMap.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/scriptPlayer.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/scriptWidget.code-snippets"
+      }
+    ]
+  }
+}
