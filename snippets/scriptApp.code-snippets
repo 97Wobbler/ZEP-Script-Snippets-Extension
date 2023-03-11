@@ -1,7 +1,6 @@
 // ZEP Script Snippets for ZEP Script Snippet Extension (ver. 0.0.1.)
 {
 	// ScriptApp - LifeCycle
-	
 	"App.onInit": {
 		"prefix": "App.onInit",
 		"body": [
@@ -50,9 +49,7 @@
 			"});"
 		]
 	},
-	
 	// ScriptApp - Field
-	
 	"App.spaceHashID": {
 		"prefix": "App.spaceHashID",
 		"body": "const SPACE_HASHID = App.spaceHashID;"
@@ -110,9 +107,7 @@
 		"prefix": "App.appHashID",
 		"body": "const APP_HASHID = App.appHashID;"
 	},
-
 	// ScriptApp - Event Listeners
-	
 	"App.onSay": {
 		"prefix": "App.onSay",
 		"body": [
@@ -178,9 +173,15 @@
 			"});"
 		]
 	},
-
+	"App.onChannelMessage": {
+		"prefix": "App.onChannelMessage",
+		"body": [
+			"App.onChannelMessage.Add(function(appId, channelNumber, mapHashId, dataString){",
+			"\tlet data = JSON.parse(dataString$1)",
+			"});"
+		]
+	},
 	// ScriptApp - Callbacks
-	
 	"App.runLater": {
 		"prefix": "App.runLater",
 		"body": [
@@ -223,9 +224,19 @@
 		"prefix": "App.putMobilePunch",
 		"body": "App.putMobilePunch(false); // true: show, false: hide"
 	},
-
+	"App.getChannels": {
+		"prefix": "App.getChannels",
+		"body": [
+			"App.getChannels(function(...channelInfos){",
+			"\tfor(let each of channelInfos) {",
+			"\t\tlet channelNumber = each.channel_number",
+			"\t\tlet onlinePlayers = each.online_players",
+			"\t\t$1",
+			"\t}",
+			"});"
+		]
+	},
 	// ScriptApp - Methods / UI
-
 	"App.loadSpritesheet": {
 		"prefix": "App.loadSpritesheet",
 		"body": [
@@ -266,9 +277,7 @@
 			"App.showYoutubeWidget(\"https://www.youtube.com/watch?v=WMxGnU5j4Hw$1\", 'sidebar$2', appWidth$3, appHeight$4);"
 		]
 	},
-
 	// ScriptApp - Methods / User Control
-	
 	"App.spawnPlayer": {
 		"prefix": "App.spawnPlayer",
 		"body": "App.spawnPlayer(targetPlayer$1.id, x$2, y$3);"
@@ -285,9 +294,7 @@
 		"prefix": "App.clearChat",
 		"body": "App.clearChat();"
 	},
-	
 	// ScriptApp - Methods / Sound
-	
 	"App.playSound": {
 		"prefix": "App.playSound",
 		"body": [
@@ -307,9 +314,11 @@
 		"prefix": "App.stopSound",
 		"body": "App.stopSound();"
 	},
-
+	"App.changeAttackSound": {
+		"prefix": "App.changeAttackSound",
+		"body": "App.changeAttackSound(\"newAttackSound.mp3$1\");"
+	},
 	// ScriptApp - Methods / Communication
-
 	"App.httpGet": {
 		"prefix": "App.httpGet",
 		"body": [
@@ -337,9 +346,14 @@
 			"});"
 		]
 	},
-
+	"App.emitChannels": {
+		"prefix": "App.emitChannels",
+		"body": [
+			"let stringData = JSON.stringify(data$1);", 
+			"App.emitChannels(stringData$2);"
+		]
+	},
 	// ScriptApp - Methods / Common
-
 	"App.sendUpdated": {
 		"prefix": "App.sendUpdated",
 		"body": "App.sendUpdated();"

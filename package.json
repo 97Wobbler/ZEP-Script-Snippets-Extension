@@ -2,7 +2,7 @@
   "name": "zep-script-snippets",
   "displayName": "ZEP Script Snippets",
   "description": "ZEP Script snippet generator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "97wobbler",
   "repository": {
     "type": "git",
@@ -10,7 +10,7 @@
   },
   "icon": "icon.png",
   "engines": {
-    "vscode": "^1.75.0"
+    "vscode": "^1.55.0"
   },
   "categories": [
     "Snippets"

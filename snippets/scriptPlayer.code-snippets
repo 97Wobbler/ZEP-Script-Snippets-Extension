@@ -1,7 +1,6 @@
 // ZEP Script Snippets for ZEP Script Snippet Extension (ver. 0.0.1.)
 {
 	// ScriptPlayer - Field
-
 	"player.id": {
 		"prefix": "player.id",
 		"body": "player.id"
@@ -156,9 +155,7 @@
 		"prefix": "player.isGuest",
 		"body": "player.isGuest"
 	},
-
 	// ScriptPlayer - Methods / UI
-
 	"player.showCenterLabel": {
 		"prefix": "player.showCenterLabel",
 		"body": "player.showCenterLabel(\"text$1\", 0xFFFFFF$2, 0x000000, 0, 3000$3);"
@@ -174,11 +171,32 @@
 			"player.showWidget(\"myHtml$1.html\", 'sidebar$2', appWidth$3, appHeight$4);"
 		]
 	},
+	"player.showWidgetResponsive": {
+		"prefix": "player.showWidgetResponsive",
+		"body": [
+			"player.showWidgetResponsive(\"myHtml$1.html\", marginTopInPercent$2, marginRightInPercent$3, marginBottomInPercent$4, marginLeftInPercent$5);"
+		]
+	},
+	"player.showBuyAlert": {
+		"prefix": "player.showBuyAlert",
+		"body": [
+			"player.showBuyAlert(itemName, price, function(){",
+			"\t$2",
+			"});"
+		]
+	},
 	"player.showYoutubeWidget": {
 		"prefix": "player.showYoutubeWidget",
 		"body": [
 			"// align value: 'popup', 'sidebar', 'top', 'topleft', 'topright', 'middle', 'middleleft', 'middleright', 'bottom', 'bottomleft', 'bottomright'",
 			"player.showYoutubeWidget(\"https://www.youtube.com/watch?v=WMxGnU5j4Hw$1\", 'sidebar$2', appWidth$3, appHeight$4);"
+		]
+	},
+	"player.openWebLink": {
+		"prefix": "player.openWebLink",
+		"body": [
+			"// 2nd parameter - popup / true: open URL in a popup modal, false: open URL in a new tab",
+			"player.openWebLink(\"https://www.youtube.com/watch?v=WMxGnU5j4Hw$1\", true);"
 		]
 	},
 	"player.sendMessage": {
@@ -216,9 +234,11 @@
 			"});"
 		]
 	},
-
+	"player.hideBuyAlert": {
+		"prefix": "player.hideBuyAlert",
+		"body": "player.hideBuyAlert()"
+	},
 	// ScriptPlayer - Methods / Data Load
-
 	"player.isEmail": {
 		"prefix": "player.isEmail",
 		"body": "player.isEmail(\"email@domain.com$1\");"
@@ -227,9 +247,7 @@
 		"prefix": "player.getLocationName",
 		"body": "player.getLocationName();"
 	},
-
 	// ScriptPlayer - Methods / User Control
-
 	"player.spawnAt": {
 		"prefix": "player.spawnAt",
 		"body": [
@@ -248,9 +266,7 @@
 		"prefix": "player.spawnAtMap",
 		"body": "player.spawnAtMap(spaceHashID$1, mapHashID$2)"
 	},
-
 	// ScriptPlayer - Methods / Sound
-	
 	"player.playSound": {
 		"prefix": "player.playSound",
 		"body": [
@@ -266,9 +282,7 @@
 			"player.playSoundLink(\"https://zep.us/assets/sounds/ring.mp3$1\", false);"
 		]
 	},
-	
 	// ScriptPlayer - Methods / Common
-	
 	"player.sendUpdated": {
 		"prefix": "player.sendUpdated",
 		"body": "player.sendUpdated();"
