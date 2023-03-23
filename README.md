@@ -44,6 +44,10 @@ To access these explanations, simply type "HELP-" before the method or field nam
     * e.g. Typing "HELP-App.onInit" will provide a detailed description of the "onInit" method in the ScriptApp class.
     * e.g. Typing "HELP-player.sendUpdated" will provide a detailed description of the "sendUpdated" method in the ScriptPlayer class.
 
+### 0.0.4
+
+* Fixed some errors.
+
 ## Credits
 
 * [@97wobbler](https://github.com/97wobbler)
