@@ -39,14 +39,10 @@ This extension generates snippets for writing ZEP Script.
 
 * Fixed some typos and syntax errors.
 * Added new snippets that provide detailed explanations for methods and fields.<br>
-To access these explanations, simply type "HELP-" before the method or field name.
+To access these explanations, simply type "?" before the method or field name.
 
-    * e.g. Typing "HELP-App.onInit" will provide a detailed description of the "onInit" method in the ScriptApp class.
-    * e.g. Typing "HELP-player.sendUpdated" will provide a detailed description of the "sendUpdated" method in the ScriptPlayer class.
-
-### 0.0.4
-
-* Fixed some errors.
+    * e.g. Typing "?App.onInit" will provide a detailed description of the "onInit" method in the ScriptApp class.
+    * e.g. Typing "?player.sendUpdated" will provide a detailed description of the "sendUpdated" method in the ScriptPlayer class.
 
 ## Credits
 
