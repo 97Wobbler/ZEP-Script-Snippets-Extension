@@ -14,9 +14,6 @@ All notable changes to the "ZEP Script Snippets" extension will be documented in
     * player.hideBuyAlert
     * player.openWebLink
     * App.changeAttackSound
-    * App.emitChannels
-    * App.onChannelMessage
-    * App.getChannels
 
 ### 0.0.3
 

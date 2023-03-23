@@ -34,9 +34,6 @@ This extension generates snippets for writing ZEP Script.
     * player.hideBuyAlert
     * player.openWebLink
     * App.changeAttackSound
-    * App.emitChannels
-    * App.onChannelMessage
-    * App.getChannels
 
 ### 0.0.3
 
