@@ -1,7 +1,7 @@
 {
 	// ScriptPlayer - Field
 	"HELP: player.id": {
-		"prefix": "HELP-player.id",
+		"prefix": "helpplayer.id",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer. The 6-digit hash ID value of the player.",
@@ -14,7 +14,7 @@
 		]
 	},
 	"HELP: player.name": {
-		"prefix": "HELP-player.name",
+		"prefix": "helpplayer.name",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer. The nickname of the player.",
@@ -27,7 +27,7 @@
 		]
 	},
 	"HELP: player.title": {
-		"prefix": "HELP-player.title",
+		"prefix": "helpplayer.title",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer. The text that displays above the player's nickname.",
@@ -40,7 +40,7 @@
 		]
 	},
 	"HELP: player.role": {
-		"prefix": "HELP-player.role",
+		"prefix": "helpplayer.role",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer. The numeric value of the player's permission role.",
@@ -54,7 +54,7 @@
 		]
 	},
 	"HELP: player.tileX": {
-		"prefix": "HELP-player.tileX",
+		"prefix": "helpplayer.tileX",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer. The x coordinate of the player's position.",
@@ -67,7 +67,7 @@
 		]
 	},
 	"HELP: player.tileY": {
-		"prefix": "HELP-player.tileY",
+		"prefix": "helpplayer.tileY",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer. The y coordinate of the player's position.",
@@ -80,7 +80,7 @@
 		]
 	},
 	"HELP: player.dir": {
-		"prefix": "HELP-player.dir",
+		"prefix": "helpplayer.dir",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer. The direction that the player’s avatar is looking.",
@@ -94,7 +94,7 @@
 		]
 	},
 	"HELP: player.moveSpeed": {
-		"prefix": "HELP-player.moveSpeed",
+		"prefix": "helpplayer.moveSpeed",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer. The movement speed value of the player. The default value is '90'. Set to '0' to prevent movement.",
@@ -107,7 +107,7 @@
 		]
 	},
 	"HELP: player.sprite": {
-		"prefix": "HELP-player.sprite",
+		"prefix": "helpplayer.sprite",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer. The sprite image of the player’s avatar.",
@@ -127,7 +127,7 @@
 		]
 	},
 	"HELP: player.tag": {
-		"prefix": "HELP-player.tag",
+		"prefix": "helpplayer.tag",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer where you can temporarily store custom attribute values for an online player.",
@@ -141,7 +141,7 @@
 		]
 	},
 	"HELP: player.hidden": {
-		"prefix": "HELP-player.hidden",
+		"prefix": "helpplayer.hidden",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer that determines whether to hide the player's avatar from others. The default value is false.",
@@ -155,7 +155,7 @@
 		]
 	},
 	"HELP: player.spotlight": {
-		"prefix": "HELP-player.spotlight",
+		"prefix": "helpplayer.spotlight",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer that determines whether the player's 'spotlight' is enabled or disabled.",
@@ -168,7 +168,7 @@
 		]
 	},
 	"HELP: player.disableVideo": {
-		"prefix": "HELP-player.disableVideo",
+		"prefix": "helpplayer.disableVideo",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer that indicates whether the player's video is deactivated or not.",
@@ -181,7 +181,7 @@
 		]
 	},
 	"HELP: player.disableAudio": {
-		"prefix": "HELP-player.disableAudio",
+		"prefix": "helpplayer.disableAudio",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer that indicates whether the player's audio is deactivated or not.",
@@ -194,7 +194,7 @@
 		]
 	},
 	"HELP: player.attackType": {
-		"prefix": "HELP-player.attackType",
+		"prefix": "helpplayer.attackType",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer that indicates the type of attack action. '0' is the default type, and '2' is for ranged attack type.",
@@ -207,7 +207,7 @@
 		]
 	},
 	"HELP: player.attackParam1": {
-		"prefix": "HELP-player.attackParam1",
+		"prefix": "helpplayer.attackParam1",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer. The distance range attribute for the player's attack image. The default value is '1'.",
@@ -221,7 +221,7 @@
 		]
 	},
 	"HELP: player.attackParam2": {
-		"prefix": "HELP-player.attackParam2",
+		"prefix": "helpplayer.attackParam2",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer. The available range for a ranged attack.",
@@ -236,7 +236,7 @@
 		]
 	},
 	"HELP: player.attackSprite": {
-		"prefix": "HELP-player.attackSprite",
+		"prefix": "helpplayer.attackSprite",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer. The attack image of a player.",
@@ -250,7 +250,7 @@
 		]
 	},
 	"HELP: player.walletAddress": {
-		"prefix": "HELP-player.walletAddress",
+		"prefix": "helpplayer.walletAddress",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer that stores the player's wallet address.",
@@ -263,7 +263,7 @@
 		]
 	},
 	"HELP: player.storage": {
-		"prefix": "HELP-player.storage",
+		"prefix": "helpplayer.storage",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer. The storage space for the player value within the 'space'.",
@@ -278,7 +278,7 @@
 		]
 	},
 	"HELP: player.isMobile": {
-		"prefix": "HELP-player.isMobile",
+		"prefix": "helpplayer.isMobile",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer that indicates whether the player is connected via mobile.",
@@ -291,7 +291,7 @@
 		]
 	},
 	"HELP: player.isMoving": {
-		"prefix": "HELP-player.isMoving",
+		"prefix": "helpplayer.isMoving",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer that indicates whether the player is moving.",
@@ -304,7 +304,7 @@
 		]
 	},
 	"HELP: player.isJumping": {
-		"prefix": "HELP-player.isJumping",
+		"prefix": "helpplayer.isJumping",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer indicates whether the player is jumping.",
@@ -317,7 +317,7 @@
 		]
 	},
 	"HELP: player.customData": {
-		"prefix": "HELP-player.customData",
+		"prefix": "helpplayer.customData",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer, the URL query string passed into the player.",
@@ -331,7 +331,7 @@
 		]
 	},
 	"HELP: player.displayRatio": {
-		"prefix": "HELP-player.displayRatio",
+		"prefix": "helpplayer.displayRatio",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer that controls player's display zooming. The default value is '1'.",
@@ -344,7 +344,7 @@
 		]
 	},
 	"HELP: player.titleColor": {
-		"prefix": "HELP-player.titleColor",
+		"prefix": "helpplayer.titleColor",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer. The color of the player's title.",
@@ -358,7 +358,7 @@
 		]
 	},
 	"HELP: player.emailHash": {
-		"prefix": "HELP-player.emailHash",
+		"prefix": "helpplayer.emailHash",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer. The hash value of the player's email.",
@@ -371,7 +371,7 @@
 		]
 	},
 	"HELP: player.isGuest": {
-		"prefix": "HELP-player.isGuest",
+		"prefix": "helpplayer.isGuest",
 		"body": [
 			"/**",
 			" * A field of ScriptPlayer, whether the player is not signed in.",
@@ -385,7 +385,7 @@
 	},
 	// ScriptPlayer - Methods / UI
 	"HELP: player.showCenterLabel": {
-		"prefix": "HELP-player.showCenterLabel",
+		"prefix": "helpplayer.showCenterLabel",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to display text at a designated location to the player.",
@@ -406,7 +406,7 @@
 		]
 	},
 	"HELP: player.showCustomLabel": {
-		"prefix": "HELP-player.showCustomLabel",
+		"prefix": "helpplayer.showCustomLabel",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to display text at a designated location to the player. Allows decorating the text using <span> tags.",
@@ -432,7 +432,7 @@
 		]
 	},
 	"HELP: player.showWidget": {
-		"prefix": "HELP-player.showWidget",
+		"prefix": "helpplayer.showWidget",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to load an HTML file as a widget and display it at the specified align position to the player.",
@@ -453,7 +453,7 @@
 		]
 	},
 	"HELP: player.showWidgetResponsive": {
-		"prefix": "HELP-player.showWidgetResponsive",
+		"prefix": "helpplayer.showWidgetResponsive",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to load an HTML file as a widget and display it to the player, in the specific area defined by relative margin values.",
@@ -476,7 +476,7 @@
 		]
 	},
 	"HELP: player.showBuyAlert": {
-		"prefix": "HELP-player.showBuyAlert",
+		"prefix": "helpplayer.showBuyAlert",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer that displays a purchase widget to the player. The callback function executes when a purchase is completed.",
@@ -492,7 +492,7 @@
 		]
 	},
 	"HELP: player.showYoutubeWidget": {
-		"prefix": "HELP-player.showYoutubeWidget",
+		"prefix": "helpplayer.showYoutubeWidget",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer that displays a YouTube video in a widget at the specified alignment to the player.",
@@ -513,7 +513,7 @@
 		]
 	},
 	"HELP: player.openWebLink": {
-		"prefix": "HELP-player.openWebLink",
+		"prefix": "helpplayer.openWebLink",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer that displays a web page in a widget or a new tab to the player.",
@@ -529,7 +529,7 @@
 		]
 	},
 	"HELP: player.sendMessage": {
-		"prefix": "HELP-player.sendMessage",
+		"prefix": "helpplayer.sendMessage",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to send a private message to the player in the chat window.",
@@ -544,7 +544,7 @@
 		]
 	},
 	"HELP: player.showPrompt": {
-		"prefix": "HELP-player.showPrompt",
+		"prefix": "helpplayer.showPrompt",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to display an input window. The callback executes after the player's response.",
@@ -567,7 +567,7 @@
 		]
 	},
 	"HELP: player.showConfirm": {
-		"prefix": "HELP-player.showConfirm",
+		"prefix": "helpplayer.showConfirm",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to display an confirm window. The callback executes when a player clicks 'OK'.",
@@ -583,7 +583,7 @@
 		]
 	},
 	"HELP: player.showAlert": {
-		"prefix": "HELP-player.showAlert",
+		"prefix": "helpplayer.showAlert",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to display an alert window. The callback executes when a player clicks 'OK'.",
@@ -598,7 +598,7 @@
 		]
 	},
 	"HELP: player.hideBuyAlert": {
-		"prefix": "HELP-player.hideBuyAlert",
+		"prefix": "helpplayer.hideBuyAlert",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to close a purchase widget of the player.",
@@ -610,7 +610,7 @@
 	},
 	// ScriptPlayer - Methods / Data Load
 	"HELP: player.isEmail": {
-		"prefix": "HELP-player.isEmail",
+		"prefix": "helpplayer.isEmail",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to compare the player's email with the specified email.",
@@ -624,7 +624,7 @@
 		]
 	},
 	"HELP: player.getLocationName": {
-		"prefix": "HELP-player.getLocationName",
+		"prefix": "helpplayer.getLocationName",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to get the location name of where the player is standing.",
@@ -637,7 +637,7 @@
 	},
 	// ScriptPlayer - Methods / User Control
 	"HELP: player.spawnAt": {
-		"prefix": "HELP-player.spawnAt",
+		"prefix": "helpplayer.spawnAt",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to move the player’s avatar to a specific coordinate, looking in the specified direction.",
@@ -655,7 +655,7 @@
 		]
 	},
 	"HELP: player.spawnAtLocation": {
-		"prefix": "HELP-player.spawnAtLocation",
+		"prefix": "helpplayer.spawnAtLocation",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to move the player’s avatar to a specific location, looking in the specified direction.",
@@ -672,7 +672,7 @@
 		]
 	},
 	"HELP: player.spawnAtMap": {
-		"prefix": "HELP-player.spawnAtMap",
+		"prefix": "helpplayer.spawnAtMap",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to move the player to the specific 'map' of the specific 'space'.",
@@ -689,7 +689,7 @@
 	},
 	// ScriptPlayer - Methods / Sound
 	"HELP: player.playSound": {
-		"prefix": "HELP-player.playSound",
+		"prefix": "helpplayer.playSound",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to play a sound file to the player.",
@@ -706,7 +706,7 @@
 		]
 	},
 	"HELP: player.playSoundLink": {
-		"prefix": "HELP-player.playSoundLink",
+		"prefix": "helpplayer.playSoundLink",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to play a sound corresponding to the given URL to the player.",
@@ -722,7 +722,7 @@
 	},
 	// ScriptPlayer - Methods / Common
 	"HELP: player.sendUpdated": {
-		"prefix": "HELP-player.sendUpdated",
+		"prefix": "helpplayer.sendUpdated",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to apply the changes of field values pertaining to 'ScriptApp' or 'ScriptPlayer'.",
@@ -733,7 +733,7 @@
 		]
 	},
 	"HELP: player.save": {
-		"prefix": "HELP-player.save",
+		"prefix": "helpplayer.save",
 		"body": [
 			"/**",
 			" * A method of ScriptPlayer, to apply any changes made to the 'player.storage'.",
