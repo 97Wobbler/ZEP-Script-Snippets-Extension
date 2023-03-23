@@ -36,6 +36,22 @@
       {
         "language": "javascript",
         "path": "./snippets/scriptWidget.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/help-scriptApp.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/help-scriptMap.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/help-scriptPlayer.code-snippets"
+      },
+      {
+        "language": "javascript",
+        "path": "./snippets/help-scriptWidget.code-snippets"
       }
     ]
   }
