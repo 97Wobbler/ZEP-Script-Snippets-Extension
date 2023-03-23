@@ -1,7 +1,7 @@
 {
 	// ScriptMap - Field
 	"HELP: Map.width": {
-		"prefix": "?Map.width",
+		"prefix": "HELP-Map.width",
 		"body": [
 			"/**",
 			" * A field of ScriptMap. The width of the current 'map'.",
@@ -14,7 +14,7 @@
 		]
 	},
 	"HELP: Map.height": {
-		"prefix": "?Map.height",
+		"prefix": "HELP-Map.height",
 		"body": [
 			"/**",
 			" * A field of ScriptMap. The height of the current 'map'.",
@@ -28,7 +28,7 @@
 	},
 	// ScriptMap - Methods
 	"HELP: Map.putTileEffect": {
-		"prefix": "?Map.putTileEffect",
+		"prefix": "HELP-Map.putTileEffect",
 		"body": [
 			"/**",
 			" * A method of ScriptMap, to apply a tile effect to the specified coordinates.",
@@ -45,7 +45,7 @@
 		]
 	},
 	"HELP: TileEffect.NONE": {
-		"prefix": "?TileEffect.NONE",
+		"prefix": "HELP-TileEffect.NONE",
 		"body": [
 			"/**",
 			" * Erases tile effects at the specified coordinates.",
@@ -59,7 +59,7 @@
 		]
 	},
 	"HELP: TileEffect.IMPASSABLE": {
-		"prefix": "?TileEffect.IMPASSABLE",
+		"prefix": "HELP-TileEffect.IMPASSABLE",
 		"body": [
 			"/**",
 			" * Sets an IMPASSABLE tile effect at the corresponding coordinates.",
@@ -73,7 +73,7 @@
 		]
 	},
 	"HELP: TileEffect.SPAWN": {
-		"prefix": "?TileEffect.SPAWN",
+		"prefix": "HELP-TileEffect.SPAWN",
 		"body": [
 			"/**",
 			" * Sets a SPAWN tile effect at the corresponding coordinates.",
@@ -87,7 +87,7 @@
 		]
 	},
 	"HELP: TileEffect.PORTAL(within the map)": {
-		"prefix": "?TileEffect.PORTAL",
+		"prefix": "HELP-TileEffect.PORTAL",
 		"body": [
 			"/**",
 			" * Installs a portal tile that links to another 'map' within the same 'space'.",
@@ -116,7 +116,7 @@
 		]
 	},
 	"HELP: TileEffect.PORTAL(outside the map)": {
-		"prefix": "?TileEffect.PORTAL",
+		"prefix": "HELP-TileEffect.PORTAL",
 		"body": [
 			"/**",
 			" * Installs a portal tile that links to a location on the current 'map'..",
@@ -143,7 +143,7 @@
 		]
 	},
 	"HELP: TileEffect.SPACE_PORTAL": {
-		"prefix": "?TileEffect.SPACE_PORTAL",
+		"prefix": "HELP-TileEffect.SPACE_PORTAL",
 		"body": [
 			"/**",
 			" * Installs a portal tile that links to another 'map' in another 'space'.",
@@ -169,7 +169,7 @@
 		]
 	},
 	"HELP: TileEffect.EMBED": {
-		"prefix": "?TileEffect.EMBED",
+		"prefix": "HELP-TileEffect.EMBED",
 		"body": [
 			"/**",
 			" * Installs a portal tile that opens a web link in a new popup modal.",
@@ -196,7 +196,7 @@
 		]
 	},
 	"HELP: TileEffect.WEB_PORTAL": {
-		"prefix": "?TileEffect.WEB_PORTAL",
+		"prefix": "HELP-TileEffect.WEB_PORTAL",
 		"body": [
 			"/**",
 			" * Installs a portal tile that opens a web link in a new popup modal.",
@@ -218,7 +218,7 @@
 		]
 	},
 	"HELP: TileEffect.TILE_EMBED": {
-		"prefix": "?TileEffect.TILE_EMBED",
+		"prefix": "HELP-TileEffect.TILE_EMBED",
 		"body": [
 			"/**",
 			" * Installs a tile effect that embeds a web URL in a designated area.",
@@ -240,7 +240,7 @@
 		]
 	},
 	"HELP: TileEffect.PRIVATE_AREA": {
-		"prefix": "?TileEffect.PRIVATE_AREA",
+		"prefix": "HELP-TileEffect.PRIVATE_AREA",
 		"body": [
 			"/**",
 			" * Installs a private area in the designated coordinates.",
@@ -262,7 +262,7 @@
 		]
 	},
 	"HELP: TileEffect.LOCATION": {
-		"prefix": "?TileEffect.LOCATION",
+		"prefix": "HELP-TileEffect.LOCATION",
 		"body": [
 			"/**",
 			" * Installs a map location in the designated coordinates.",
@@ -286,7 +286,7 @@
 		]
 	},
 	"HELP: TileEffect.AMBIENT_SOUND": {
-		"prefix": "?TileEffect.AMBIENT_SOUND",
+		"prefix": "HELP-TileEffect.AMBIENT_SOUND",
 		"body": [
 			"/**",
 			" * Installs a tile effect for ambient sound, in the designated coordinates.",
@@ -308,7 +308,7 @@
 		]
 	},
 	"HELP: Map.putObject": {
-		"prefix": "?Map.putObject",
+		"prefix": "HELP-Map.putObject",
 		"body": [
 			"/**",
 			" * A method of ScriptMap, to place an object, that can be called with its coordinates.",
@@ -329,7 +329,7 @@
 		]
 	},
 	"HELP: Map.playObjectAnimation": {
-		"prefix": "?Map.playObjectAnimation",
+		"prefix": "HELP-Map.playObjectAnimation",
 		"body": [
 			"/**",
 			" * A method of ScriptMap, to execute sprite animation of a 'script-placed object with NO key'. This calls the target object with a set of coordinates.",
@@ -347,7 +347,7 @@
 		]
 	},
 	"HELP: Map.moveObject": {
-		"prefix": "?Map.moveObject",
+		"prefix": "HELP-Map.moveObject",
 		"body": [
 			"/**",
 			" * A method of ScriptMap, to move a 'script-placed object with NO key'. This calls the target object with a set of coordinates.",
@@ -368,7 +368,7 @@
 		]
 	},
 	"HELP: Map.putObjectWithKey": {
-		"prefix": "?Map.putObjectWithKey",
+		"prefix": "HELP-Map.putObjectWithKey",
 		"body": [
 			"/**",
 			" * A method of ScriptMap, to place an object, that can be called with its key value.",
@@ -397,7 +397,7 @@
 		]
 	},
 	"HELP: Map.getObjectWithKey": {
-		"prefix": "?Map.getObjectWithKey",
+		"prefix": "HELP-Map.getObjectWithKey",
 		"body": [
 			"/**",
 			" * A method of ScriptMap, to retrieves the JSON data of a 'script-placed object with key'. This calls the target object with its value.",
@@ -411,7 +411,7 @@
 		]
 	},
 	"HELP: Map.playObjectAnimationWithKey": {
-		"prefix": "?Map.playObjectAnimationWithKey",
+		"prefix": "HELP-Map.playObjectAnimationWithKey",
 		"body": [
 			"/**",
 			" * A method of ScriptMap, to play a sprite animation of a 'script-placed object with key'. This calls the target object with its value.",
@@ -431,7 +431,7 @@
 		]
 	},
 	"HELP: Map.moveObjectWithKey": {
-		"prefix": "?Map.moveObjectWithKey",
+		"prefix": "HELP-Map.moveObjectWithKey",
 		"body": [
 			"/**",
 			" * A method of ScriptMap, to move a 'script-placed object with key'. This calls the target object with its key value.",
@@ -450,7 +450,7 @@
 		]
 	},
 	"HELP: Map.clearAllObjects": {
-		"prefix": "?Map.clearAllObjects",
+		"prefix": "HELP-Map.clearAllObjects",
 		"body": [
 			"/**",
 			" * A method of ScriptMap, to remove all the script-placed objects.",
@@ -461,7 +461,7 @@
 		]
 	},
 	"HELP: Map.getTile": {
-		"prefix": "?Map.getTile",
+		"prefix": "HELP-Map.getTile",
 		"body": [
 			"/**",
 			" * A method of ScriptMap, that returns the enum value of the tile at the specific coordinates of the corresponding layer.",
@@ -479,7 +479,7 @@
 		]
 	},
 	"HELP: Map.hasLocation": {
-		"prefix": "?Map.hasLocation",
+		"prefix": "HELP-Map.hasLocation",
 		"body": [
 			"/**",
 			" * A method of ScriptMap, that returns a boolean indicating whether a location with the specified name exists on the 'map'.",
@@ -493,7 +493,7 @@
 		]
 	},
 	"HELP: Map.getObjectsByType": {
-		"prefix": "?Map.getObjectsByType",
+		"prefix": "HELP-Map.getObjectsByType",
 		"body": [
 			"/**",
 			" * A method of ScriptMap, that returns a list of editor-placed objects on the 'map' that correspond to the specified type.",
@@ -512,7 +512,7 @@
 		]
 	},
 	"HELP: Map.getTopObjectsByType": {
-		"prefix": "?Map.getTopObjectsByType",
+		"prefix": "HELP-Map.getTopObjectsByType",
 		"body": [
 			"/**",
 			" * A method of ScriptMap, that returns a list of editor-placed top-objects on the 'map' that correspond to the specified type.",

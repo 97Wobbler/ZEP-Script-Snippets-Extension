@@ -1,7 +1,7 @@
 {
 	// ScriptApp - LifeCycle
 	"HELP: App.onInit": {
-		"prefix": "?App.onInit",
+		"prefix": "HELP-App.onInit",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to set a function that executes when the 'app initialized' event occurs.",
@@ -15,7 +15,7 @@
 		]
 	},
 	"HELP: App.onJoinPlayer": {
-		"prefix": "?App.onJoinPlayer",
+		"prefix": "HELP-App.onJoinPlayer",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to set a function that executes when the 'player joined' event occurs.",
@@ -30,7 +30,7 @@
 		]
 	},
 	"HELP: App.onStart": {
-		"prefix": "?App.onStart",
+		"prefix": "HELP-App.onStart",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to set a function that executes when the 'app started' event occurs.",
@@ -44,7 +44,7 @@
 		]
 	},
 	"HELP: App.onUpdate": {
-		"prefix": "?App.onUpdate",
+		"prefix": "HELP-App.onUpdate",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to set a function that executes when the 'frame updated' event occurs, which is triggered every 20 milliseconds.",
@@ -59,7 +59,7 @@
 		]
 	},
 	"HELP: App.onLeavePlayer": {
-		"prefix": "?App.onLeavePlayer",
+		"prefix": "HELP-App.onLeavePlayer",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to set a function that executes when the 'player left' event occurs.",
@@ -74,7 +74,7 @@
 		]
 	},
 	"HELP: App.onDestroy": {
-		"prefix": "?App.onDestroy",
+		"prefix": "HELP-App.onDestroy",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to set a function that executes when the 'app destroyed' event occurs.",
@@ -89,7 +89,7 @@
 	},
 	// ScriptApp - Field
 	"HELP: App.spaceHashID": {
-		"prefix": "?App.spaceHashID",
+		"prefix": "HELP-App.spaceHashID",
 		"body": [
 			"/** ",
 			" * A field of ScriptApp. The 6-digit hash ID value of the 'space' where the app is installed.",
@@ -102,7 +102,7 @@
 		]
 	},
 	"HELP: App.mapHashID": {
-		"prefix": "?App.mapHashID",
+		"prefix": "HELP-App.mapHashID",
 		"body": [
 			"/** ",
 			" * A field of ScriptApp. The 6-digit hash ID value of the 'map' where the app is installed.",
@@ -115,7 +115,7 @@
 		]
 	},
 	"HELP: App.creatorID": {
-		"prefix": "?App.creatorID",
+		"prefix": "HELP-App.creatorID",
 		"body": [
 			"/**",
 			" * A field of ScriptApp. The 6-digit ID value of the player who executed the app.",
@@ -128,7 +128,7 @@
 		]
 	},
 	"HELP: App.players": {
-		"prefix": "?App.players",
+		"prefix": "HELP-App.players",
 		"body": [
 			"/** ",
 			" * A field of ScriptApp. A list of all players on the 'map' as an array.",
@@ -141,7 +141,7 @@
 		]
 	},
 	"HELP: App.playerCount": {
-		"prefix": "?App.playerCount",
+		"prefix": "HELP-App.playerCount",
 		"body": [
 			"/**",
 			" * A field of ScriptApp. The number of all players on the 'map' where the app is installed.",
@@ -154,7 +154,7 @@
 		]
 	},
 	"HELP: App.cameraEffect": {
-		"prefix": "?App.cameraEffect",
+		"prefix": "HELP-App.cameraEffect",
 		"body": [
 			"/**",
 			" * A field of ScriptApp. The variable value to set the type of camera effect.",
@@ -168,7 +168,7 @@
 		]
 	},
 	"HELP: App.cameraEffectParam1": {
-		"prefix": "?App.cameraEffectParam1",
+		"prefix": "HELP-App.cameraEffectParam1",
 		"body": [
 			"/**",
 			" * A field of ScriptApp. The range value of camera effect.",
@@ -181,7 +181,7 @@
 		]
 	},
 	"HELP: App.displayRatio": {
-		"prefix": "?App.displayRatio",
+		"prefix": "HELP-App.displayRatio",
 		"body": [
 			"/**",
 			" * A field of ScriptApp. The value to control display zooming. Default value is '1'.",
@@ -194,7 +194,7 @@
 		]
 	},
 	"HELP: App.storage": {
-		"prefix": "?App.storage",
+		"prefix": "HELP-App.storage",
 		"body": [
 			"/**",
 			" * A field of ScriptApp. A data storage that is assigned to the specific 'app', that is installed in the current 'space'.",
@@ -207,7 +207,7 @@
 		]
 	},
 	"HELP: App.followPlayer": {
-		"prefix": "?App.followPlayer",
+		"prefix": "HELP-App.followPlayer",
 		"body": [
 			"/**",
 			" * A field of ScriptApp. The value determines whether the app's follow function is enabled. Default value is 'false'.",
@@ -220,7 +220,7 @@
 		]
 	},
 	"HELP: App.showName": {
-		"prefix": "?App.showName",
+		"prefix": "HELP-App.showName",
 		"body": [
 			"/**",
 			" * A field of ScriptApp. The value determines whether the player's nickname is hidden. Default value is 'true'.",
@@ -233,7 +233,7 @@
 		]
 	},
 	"HELP: App.appHashID": {
-		"prefix": "?App.appHashID",
+		"prefix": "HELP-App.appHashID",
 		"body": [
 			"/**",
 			" * A field of ScriptApp. The 6-digit hash ID value of the current 'app'.",
@@ -247,7 +247,7 @@
 	},
 	// ScriptApp - Event Listeners
 	"HELP: App.onSay": {
-		"prefix": "?App.onSay",
+		"prefix": "HELP-App.onSay",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to set a function that executes when the 'chat input' event occurs.",
@@ -263,7 +263,7 @@
 		]
 	},
 	"HELP: App.onPlayerTouched": {
-		"prefix": "?App.onPlayerTouched",
+		"prefix": "HELP-App.onPlayerTouched",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to set a function that executes when the 'avatar collision' event occurs.",
@@ -281,7 +281,7 @@
 		]
 	},
 	"HELP: App.onObjectTouched": {
-		"prefix": "?App.onObjectTouched",
+		"prefix": "HELP-App.onObjectTouched",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to set a function that executes when the 'collision between an avatar and a script-placed object with NO key' event occurs.",
@@ -301,7 +301,7 @@
 		]
 	},
 	"HELP: App.onAppObjectTouched": {
-		"prefix": "?App.onAppObjectTouched",
+		"prefix": "HELP-App.onAppObjectTouched",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to set a function that executes when the 'collision between an avatar and a script-placed object with key' event occurs.",
@@ -319,7 +319,7 @@
 		]
 	},
 	"HELP: App.onUnitAttacked": {
-		"prefix": "?App.onUnitAttacked",
+		"prefix": "HELP-App.onUnitAttacked",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to set a function that executes when the 'avatar attacked' event occurs.",
@@ -337,7 +337,7 @@
 		]
 	},
 	"HELP: App.onObjectAttacked": {
-		"prefix": "?App.onObjectAttacked",
+		"prefix": "HELP-App.onObjectAttacked",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to set a function that executes when the 'script-placed object with NO key attacked' event occurs.",
@@ -355,7 +355,7 @@
 		]
 	},
 	"HELP: App.onSidebarTouched": {
-		"prefix": "?App.onSidebarTouched",
+		"prefix": "HELP-App.onSidebarTouched",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to set a function that executes when the 'sidebar app icon clicked/touched' event occurs.",
@@ -371,7 +371,7 @@
 		]
 	},
 	"HELP: App.onTriggerObject": {
-		"prefix": "?App.onTriggerObject",
+		"prefix": "HELP-App.onTriggerObject",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to set a function that executes when the 'object interaction' event occurs.",
@@ -390,7 +390,7 @@
 	},
 	// ScriptApp - Callbacks
 	"HELP: App.runLater": {
-		"prefix": "?App.runLater",
+		"prefix": "HELP-App.runLater",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, that schedules the execution of a callback function after a specified period of time, measured in SECONDS.",
@@ -405,7 +405,7 @@
 		]
 	},
 	"HELP: App.addOnTileTouched": {
-		"prefix": "?App.addOnTileTouched",
+		"prefix": "HELP-App.addOnTileTouched",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to set a function that executes when a player reaches a designated coordinates.",
@@ -423,7 +423,7 @@
 		]
 	},
 	"HELP: App.addOnLocationTouched": {
-		"prefix": "?App.addOnLocationTouched",
+		"prefix": "HELP-App.addOnLocationTouched",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to set a function that executes when a player reaches a designated location.",
@@ -439,7 +439,7 @@
 		]
 	},
 	"HELP: App.addOnKeyDown": {
-		"prefix": "?App.addOnKeyDown",
+		"prefix": "HELP-App.addOnKeyDown",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to set a function that executes when a player presses a designated key on the keyboard.",
@@ -457,7 +457,7 @@
 		]
 	},
 	"HELP: App.addMobileButton": {
-		"prefix": "?App.addMobileButton",
+		"prefix": "HELP-App.addMobileButton",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to add a custom mobile button, and to set a function that executes when a player presses the button.",
@@ -476,7 +476,7 @@
 		]
 	},
 	"HELP: App.putMobilePunch": {
-		"prefix": "?App.putMobilePunch",
+		"prefix": "HELP-App.putMobilePunch",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to determine whether the mobile punch button is hidden.",
@@ -490,7 +490,7 @@
 	},
 	// ScriptApp - Methods / UI
 	"HELP: App.loadSpritesheet": {
-		"prefix": "?App.loadSpritesheet",
+		"prefix": "HELP-App.loadSpritesheet",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to read a sprite sheet image file and convert it into an object.",
@@ -518,7 +518,7 @@
 		]
 	},
 	"HELP: App.showCenterLabel": {
-		"prefix": "?App.showCenterLabel",
+		"prefix": "HELP-App.showCenterLabel",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to display text at a designated location for all players.",
@@ -539,7 +539,7 @@
 		]
 	},
 	"HELP: App.showCustomLabel": {
-		"prefix": "?App.showCustomLabel",
+		"prefix": "HELP-App.showCustomLabel",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to display text at a designated location for all players. Allows decorating the text using <span> tags.",
@@ -565,7 +565,7 @@
 		]
 	},
 	"HELP: App.sayToAll": {
-		"prefix": "?App.sayToAll",
+		"prefix": "HELP-App.sayToAll",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to display text in the chat window.",
@@ -580,7 +580,7 @@
 		]
 	},
 	"HELP: App.showWidget": {
-		"prefix": "?App.showWidget",
+		"prefix": "HELP-App.showWidget",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to load an HTML file as a widget and display it at the specified align position for all players.",
@@ -601,7 +601,7 @@
 		]
 	},
 	"HELP: App.showYoutubeWidget": {
-		"prefix": "?App.showYoutubeWidget",
+		"prefix": "HELP-App.showYoutubeWidget",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to display a YouTube video in a widget at the specified alignment for all players.",
@@ -623,7 +623,7 @@
 	},
 	// ScriptApp - Methods / User Control
 	"HELP: App.spawnPlayer": {
-		"prefix": "?App.spawnPlayer",
+		"prefix": "HELP-App.spawnPlayer",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to move the player corresponding to playerID to the specified tile coordinates.",
@@ -640,7 +640,7 @@
 		]
 	},
 	"HELP: App.kickPlayer": {
-		"prefix": "?App.kickPlayer",
+		"prefix": "HELP-App.kickPlayer",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to kick the player corresponding to playerID.",
@@ -654,7 +654,7 @@
 		]
 	},
 	"HELP: App.forceDestroy": {
-		"prefix": "?App.forceDestroy",
+		"prefix": "HELP-App.forceDestroy",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to shut down the mini-game app by force.",
@@ -665,7 +665,7 @@
 		]
 	},
 	"HELP: App.clearChat": {
-		"prefix": "?App.clearChat",
+		"prefix": "HELP-App.clearChat",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to delete all chat history.",
@@ -677,7 +677,7 @@
 	},
 	// ScriptApp - Methods / Sound
 	"HELP: App.playSound": {
-		"prefix": "?App.playSound",
+		"prefix": "HELP-App.playSound",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to play a sound file to all players.",
@@ -694,7 +694,7 @@
 		]
 	},
 	"HELP: App.playSoundLink": {
-		"prefix": "?App.playSoundLink",
+		"prefix": "HELP-App.playSoundLink",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to play a sound corresponding to the given URL to all players.",
@@ -709,7 +709,7 @@
 		]
 	},
 	"HELP: App.stopSound": {
-		"prefix": "?App.stopSound",
+		"prefix": "HELP-App.stopSound",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to stop all currently playing sounds.",
@@ -720,7 +720,7 @@
 		]
 	},
 	"HELP: App.changeAttackSound": {
-		"prefix": "?App.changeAttackSound",
+		"prefix": "HELP-App.changeAttackSound",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to change attack sound.",
@@ -734,7 +734,7 @@
 	},
 	// ScriptApp - Methods / Communication
 	"HELP: App.httpGet": {
-		"prefix": "?App.httpGet",
+		"prefix": "HELP-App.httpGet",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to execute an HTTP GET request to the specified UR.",
@@ -753,7 +753,7 @@
 		]
 	},
 	"HELP: App.httpPost": {
-		"prefix": "?App.httpPost",
+		"prefix": "HELP-App.httpPost",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to execute an HTTP POST request to the specified URL.",
@@ -774,7 +774,7 @@
 		]
 	},
 	"HELP: App.httpPostJson": {
-		"prefix": "?App.httpPostJson",
+		"prefix": "HELP-App.httpPostJson",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to execute an HTTP POST request to the specified URL.",
@@ -796,7 +796,7 @@
 	},
 	// ScriptApp - Methods / Common
 	"HELP: App.sendUpdated": {
-		"prefix": "?App.sendUpdated",
+		"prefix": "HELP-App.sendUpdated",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to apply any updated app-related field values when changes are made.",
@@ -807,7 +807,7 @@
 		]
 	},
 	"HELP: App.save": {
-		"prefix": "?App.save",
+		"prefix": "HELP-App.save",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to apply any updated app storage values when changes are made.",
@@ -819,7 +819,7 @@
 		]
 	},
 	"HELP: App.setStroage": {
-		"prefix": "?App.setStroage",
+		"prefix": "HELP-App.setStroage",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, that complements the 'App.save' method for storing app data.",
@@ -831,7 +831,7 @@
 		]
 	},
 	"HELP: App.getStorage": {
-		"prefix": "?App.getStorage",
+		"prefix": "HELP-App.getStorage",
 		"body": [
 			"/**",
 			" * A method of ScriptApp, to synchronize app storage data across different 'maps' in the same 'space', ensuring they have the same data.",
