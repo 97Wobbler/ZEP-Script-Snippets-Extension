@@ -1,7 +1,5 @@
-// ZEP Script Snippets for ZEP Script Snippet Extension (ver. 0.0.1.)
 {
 	// ScriptMap - Field
-	
 	"Map.width": {
 		"prefix": "Map.width",
 		"body": "Map.width"
@@ -10,10 +8,8 @@
 		"prefix": "Map.height",
 		"body": "Map.height"
 	},
-	
 	// ScriptMap - Methods
-	
-	"App.putTileEffect": {
+	"Map.putTileEffect": {
 		"prefix": "Map.putTileEffect",
 		"body": [
 			"// NONE: no effect / delete tile effect",
@@ -49,26 +45,26 @@
 			"Map.putObjectWithKey(x$1, y$2, spriteName$3, {",
 			"\toverlap: true$4,",
 			"\tmoveSpeed: 90$5, // default: 90",
-			"\tkey: \"obejctKeyName$6\"",
+			"\tkey: 'obejctKeyName$6'",
 			"});"
 		]
 	},
 	"Map.getObjectWithKey": {
 		"prefix": "Map.getObjectWithKey",
-		"body": "Map.getObjectWithKey(\"obejctKeyName$1\");"
+		"body": "Map.getObjectWithKey('obejctKeyName$1');"
 	},
 	"Map.playObjectAnimationWithKey": {
 		"prefix": "Map.playObjectAnimationWithKey",
 		"body": [
 			"// 3rd parameter - loop / -1: infinite loop",
-			"Map.playObjectAnimationWithKey(\"obejctKeyName$1\", \"dance\"$2, 0$3);"
+			"Map.playObjectAnimationWithKey('obejctKeyName$1', 'dance'$2, 0$3);"
 		]
 	},
 	"Map.moveObjectWithKey": {
 		"prefix": "Map.moveObjectWithKey",
 		"body": [
 			"// 4th parameter - usePath / true: CANNOT pass an impassable tile, false: can pass an impassable tile",
-			"Map.moveObjectWithKey(\"obejctKeyName$1\", targetX$2, targetY$3, true);"
+			"Map.moveObjectWithKey('obejctKeyName$1', targetX$2, targetY$3, true);"
 		]
 	},
 	"Map.clearAllObjects": {
@@ -84,7 +80,7 @@
 	},
 	"Map.hasLocation": {
 		"prefix": "Map.hasLocation",
-		"body": "Map.hasLocation(\"locationName$1\")"
+		"body": "Map.hasLocation('locationName$1')"
 	},
 	"Map.getObjectsByType": {
 		"prefix": "Map.getObjectsByType",

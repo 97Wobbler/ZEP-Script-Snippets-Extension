@@ -1,32 +1,28 @@
-// ZEP Script Snippets for ZEP Script Snippet Extension (ver. 0.0.1.)
 {
 	// ScriptWidget - Event Listeners
-
-	"widget.onMessage" : {
-		"prefix": "widget.onMessage",
+	"widget.onMessage": {
+		"prefix": "onMessage",
 		"body": [
-			".onMessage.Add(function(targetPlayer, data){",
+			"onMessage.Add(function (targetPlayer, data) {",
 			"\tlet type = data.type;",
 			"\tswitch(type) {",
-			"\t\tcase \"exit\":",
+			"\t\tcase 'exit':",
 			"\t\t\t// closeApp(targetPlayer);",
 			"\tbreak;",
 			"\t\tdefault:",
-			"\t\t\t//...",
+			"\t\t\t// ...",
 			"\t\t\tbreak;",
 			"\t}",
 			"});"
 		]
 	},
-
 	// ScriptWidget - Methods
-
-	"widget.sendMessage" : {
-		"prefix": "widget.sendMessage",
-		"body": ".sendMessage(objectName$1);"
+	"widget.sendMessage": {
+		"prefix": "sendMessage",
+		"body": "sendMessage({ $0 });"
 	},
-	"widget.destroy" : {
-		"prefix": "widget.destroy",
+	"widget.destroy": {
+		"prefix": "destroy",
 		"body": "destroy();"
 	}
 }

@@ -1,0 +1,848 @@
+{
+	// ScriptApp - LifeCycle
+	"HELP: App.onInit": {
+		"prefix": "?App.onInit",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to set a function that executes when the 'app initialized' event occurs.",
+			" * In other words, this function will be executed when the app runs for the first time.",
+			" */",
+			"",
+			"// Example usage",
+			"App.onInit.Add(function () {",
+			"\t// do something...",
+			"});"
+		]
+	},
+	"HELP: App.onJoinPlayer": {
+		"prefix": "?App.onJoinPlayer",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to set a function that executes when the 'player joined' event occurs.",
+			" * In other words, this function will be executed every time a player enters.",
+			" * @param {ScriptPlayer} player - The player who enters.",
+			" */",
+			"",
+			"// Example usage",
+			"App.onJoinPlayer.Add(function (player) {",
+			"\t// do something...",
+			"});"
+		]
+	},
+	"HELP: App.onStart": {
+		"prefix": "?App.onStart",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to set a function that executes when the 'app started' event occurs.",
+			" * In other words, this function will be executed once the (mini-game) app starts.",
+			" */",
+			"",
+			"// Example usage",
+			"App.onStart.Add(function () {",
+			"\t// do something...",
+			"});"
+		]
+	},
+	"HELP: App.onUpdate": {
+		"prefix": "?App.onUpdate",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to set a function that executes when the 'frame updated' event occurs, which is triggered every 20 milliseconds.",
+			" * In other words, this function will be executed every 20 milliseconds.",
+			" * @param {number} dt - The delta time (the time taken for the previous frame to complete, about 20 milliseconds).",
+			" */",
+			"",
+			"// Example usage",
+			"App.onUpdate.Add(function (dt) {",
+			"\t// do something...",
+			"});"
+		]
+	},
+	"HELP: App.onLeavePlayer": {
+		"prefix": "?App.onLeavePlayer",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to set a function that executes when the 'player left' event occurs.",
+			" * In other words, this function will be executed every time a player exits.",
+			" * @param {ScriptPlayer} player - The player who exits.",
+			" */",
+			"",
+			"// Example usage",
+			"App.onLeavePlayer.Add(function (player) {",
+			"\t// do something...",
+			"});"
+		]
+	},
+	"HELP: App.onDestroy": {
+		"prefix": "?App.onDestroy",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to set a function that executes when the 'app destroyed' event occurs.",
+			" * In other words, this function will be executed once the (mini-game) app has finished.",
+			" */",
+			"",
+			"// Example usage",
+			"App.onDestroy.Add(function () {",
+			"\t// do something...",
+			"});"
+		]
+	},
+	// ScriptApp - Field
+	"HELP: App.spaceHashID": {
+		"prefix": "?App.spaceHashID",
+		"body": [
+			"/** ",
+			" * A field of ScriptApp. The 6-digit hash ID value of the 'space' where the app is installed.",
+			" * @readonly",
+			" * @type {string}",
+			" */",
+			"",
+			"// Example usage",
+			"const SPACE_HASHID = App.spaceHashID;"
+		]
+	},
+	"HELP: App.mapHashID": {
+		"prefix": "?App.mapHashID",
+		"body": [
+			"/** ",
+			" * A field of ScriptApp. The 6-digit hash ID value of the 'map' where the app is installed.",
+			" * @readonly",
+			" * @type {string}",
+			" */",
+			"",
+			"// Example usage",
+			"const MAP_HASHID = App.mapHashID;"
+		]
+	},
+	"HELP: App.creatorID": {
+		"prefix": "?App.creatorID",
+		"body": [
+			"/**",
+			" * A field of ScriptApp. The 6-digit ID value of the player who executed the app.",
+			" * @readonly",
+			" * @type {string}",
+			" */",
+			"",
+			"// Example usage",
+			"const CREATOR_ID = App.creatorID"
+		]
+	},
+	"HELP: App.players": {
+		"prefix": "?App.players",
+		"body": [
+			"/** ",
+			" * A field of ScriptApp. A list of all players on the 'map' as an array.",
+			" * @readonly",
+			" * @type {Array.<ScriptPlayer>}",
+			" */",
+			"",
+			"// Example usage",
+			"let players = App.players;"
+		]
+	},
+	"HELP: App.playerCount": {
+		"prefix": "?App.playerCount",
+		"body": [
+			"/**",
+			" * A field of ScriptApp. The number of all players on the 'map' where the app is installed.",
+			" * @readonly",
+			" * @type {number}",
+			" */",
+			"",
+			"// Example usage",
+			"let playerNum = App.playerCount;"
+		]
+	},
+	"HELP: App.cameraEffect": {
+		"prefix": "?App.cameraEffect",
+		"body": [
+			"/**",
+			" * A field of ScriptApp. The variable value to set the type of camera effect.",
+			" * @type {number} - The type of camera effect. / 0: NONE / 1: VIGNETTING",
+			" */",
+			"",
+			"// Example usage",
+			"App.cameraEffect = 1;",
+			"App.cameraEffectParam1 = 500;",
+			"App.sendUpdated();"
+		]
+	},
+	"HELP: App.cameraEffectParam1": {
+		"prefix": "?App.cameraEffectParam1",
+		"body": [
+			"/**",
+			" * A field of ScriptApp. The range value of camera effect.",
+			" * @type {number}",
+			" */",
+			"",
+			"// Example usage",
+			"App.cameraEffectParam1 = 500;",
+			"App.sendUpdated();"
+		]
+	},
+	"HELP: App.displayRatio": {
+		"prefix": "?App.displayRatio",
+		"body": [
+			"/**",
+			" * A field of ScriptApp. The value to control display zooming. Default value is '1'.",
+			" * @type {number}",
+			" */",
+			"",
+			"// Example usage",
+			"App.displayRatio = 2.5;",
+			"App.sendUpdated();"
+		]
+	},
+	"HELP: App.storage": {
+		"prefix": "?App.storage",
+		"body": [
+			"/**",
+			" * A field of ScriptApp. A data storage that is assigned to the specific 'app', that is installed in the current 'space'.",
+			" * NOTE: This is a STRING value, so make sure to use 'JSON.stringify' when saving data to it and 'JSON.parse' when loading data from it.",
+			" * @type {string}",
+			" * To learn how to save and load app storage data, type '?App.setStroage', '?App.getStorage', and '?App.save'.",
+			" */",
+			"",
+			"// Example usage",
+		]
+	},
+	"HELP: App.followPlayer": {
+		"prefix": "?App.followPlayer",
+		"body": [
+			"/**",
+			" * A field of ScriptApp. The value determines whether the app's follow function is enabled. Default value is 'false'.",
+			" * @type {boolean}",
+			" */",
+			"",
+			"// Example usage",
+			"App.followPlayer = true;",
+			"App.sendUpdated();"
+		]
+	},
+	"HELP: App.showName": {
+		"prefix": "?App.showName",
+		"body": [
+			"/**",
+			" * A field of ScriptApp. The value determines whether the player's nickname is hidden. Default value is 'true'.",
+			" * @type {boolean}",
+			" */",
+			"",
+			"// Example usage",
+			"App.showName = false;",
+			"App.sendUpdated();"
+		]
+	},
+	"HELP: App.appHashID": {
+		"prefix": "?App.appHashID",
+		"body": [
+			"/**",
+			" * A field of ScriptApp. The 6-digit hash ID value of the current 'app'.",
+			" * @readonly",
+			" * @type {string}",
+			" */",
+			"",
+			"// Example usage",
+			"const APP_HASHID = App.appHashID;"
+		]
+	},
+	// ScriptApp - Event Listeners
+	"HELP: App.onSay": {
+		"prefix": "?App.onSay",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to set a function that executes when the 'chat input' event occurs.",
+			" * In other words, this function will be executed every time a player enters a chat message.",
+			" * @param {ScriptPlayer} player - The player who entered the chat message.",
+			" * @param {string} text - The text content of the chat message.",
+			" */",
+			"",
+			"// Example usage",
+			"App.onSay.Add(function (player, text) {",
+			"\t// do something...",
+			"});"
+		]
+	},
+	"HELP: App.onPlayerTouched": {
+		"prefix": "?App.onPlayerTouched",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to set a function that executes when the 'avatar collision' event occurs.",
+			" * In other words, this function will be executed when two player's avatar collide.",
+			" * @param {ScriptPlayer} sender - The player who caused the collision.",
+			" * @param {ScriptPlayer} target - The player who was collided with.",
+			" * @param {number} x - The x coordinate of the collision location.",
+			" * @param {number} y - The y coordinate of the collision location.",
+			" */",
+			"",
+			"// Example usage",
+			"App.onPlayerTouched.Add(function (sender, target, x, y) {",
+			"\t// do something...",
+			"});"
+		]
+	},
+	"HELP: App.onObjectTouched": {
+		"prefix": "?App.onObjectTouched",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to set a function that executes when the 'collision between an avatar and a script-placed object with NO key' event occurs.",
+			" * In other words, this function will be executed when a player's avatar collides with an script-placed object placed using 'Map.putObject'.",
+			" * NOTE: 'onObjectTouched' was also used to detect the player's interactions with editor-placed object before 'onTriggerObject' was introduced.",
+			" * @param {ScriptPlayer} sender - The player who collides with the object.",
+			" * @param {number} x - The x coordinate of the collision location.",
+			" * @param {number} y - The y coordinate of the collision location.",
+			" * @param {number} tileID - The tile ID of the object that was collided with.",
+			" * @param {ScriptObject} obj - The object that was collided with.",
+			" */",
+			"",
+			"// Example usage",
+			"App.onObjectTouched.Add(function (sender, x, y, tileID, obj) {",
+			"\t// do something...",
+			"});"
+		]
+	},
+	"HELP: App.onAppObjectTouched": {
+		"prefix": "?App.onAppObjectTouched",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to set a function that executes when the 'collision between an avatar and a script-placed object with key' event occurs.",
+			" * In other words, this function will be executed when a player's avatar collides with an script-placed object placed using 'Map.putObjectWithKey'.",
+			" * @param {ScriptPlayer} sender - The player who collides with the object.",
+			" * @param {string} key - The key value of the object that was collided with.",
+			" * @param {number} x - The x coordinate of the collision location.",
+			" * @param {number} y - The y coordinate of the collision location.",
+			" */",
+			"",
+			"// Example usage",
+			"App.onAppObjectTouched.Add(function (sender, key, x, y) {",
+			"\t// do something...",
+			"});"
+		]
+	},
+	"HELP: App.onUnitAttacked": {
+		"prefix": "?App.onUnitAttacked",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to set a function that executes when the 'avatar attacked' event occurs.",
+			" * In other words, this function will be executed when a player attacks another player.",
+			" * @param {ScriptPlayer} sender - The player who initiates the attack.",
+			" * @param {number} x - The x coordinate of the attacking player.",
+			" * @param {number} y - The y coordinate of the attacking player.",
+			" * @param {ScriptPlayer} target - The player who is attacked.",
+			" */",
+			"",
+			"// Example usage",
+			"App.onUnitAttacked.Add(function (sender, x, y, target) {",
+			"\t// do something...",
+			"});"
+		]
+	},
+	"HELP: App.onObjectAttacked": {
+		"prefix": "?App.onObjectAttacked",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to set a function that executes when the 'script-placed object with NO key attacked' event occurs.",
+			" * In other words, this function will be executed when a player attacks an script-placed object placed using 'Map.putObject'.",
+			" * NOTE: 'onObjectAttacked' CANNOT detect the 'script-placed object with key attacked' event.",
+			" * @param {ScriptPlayer} sender - The player who initiates the attack on an object.",
+			" * @param {number} x - The x coordinate of the object being attacked.",
+			" * @param {number} y - The y coordinate of the object being attacked.",
+			" */",
+			"",
+			"// Example usage",
+			"App.onObjectAttacked.Add(function (sender, x, y) {",
+			"\t// do something...",
+			"});"
+		]
+	},
+	"HELP: App.onSidebarTouched": {
+		"prefix": "?App.onSidebarTouched",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to set a function that executes when the 'sidebar app icon clicked/touched' event occurs.",
+			" * In other words, this function will be executed when a player clicks/touches the icon of the current (sidebar) app.",
+			" * @param {ScriptPlayer} player - The player who clicks or touches the sidebar app icon.",
+			" */",
+			"",
+			"// Example usage",
+			"App.onSidebarTouched.Add(function (player) {",
+			"\t// Set the align value to 'sidebar' so that the shown widget can be closed with a second click or touch.",
+			"\tplayer.tag.widget = player.showWidget('myHtml.html', 'sidebar', appWidth, appHeight);",
+			"});"
+		]
+	},
+	"HELP: App.onTriggerObject": {
+		"prefix": "?App.onTriggerObject",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to set a function that executes when the 'object interaction' event occurs.",
+			" * In other words, this function will be executed when a player's avatar interacts with an editor-placed object.",
+			" * @param {ScriptPlayer} player - The player who interacts with the object.",
+			" * @param {number} layerID - The ID of the layer where the object is placed. // 3: OBJECT / 5: TOP-OBJECT",
+			" * @param {number} x - The x coordinate of the object.",
+			" * @param {number} y - The y coordinate of the object.",
+			" */",
+			"",
+			"// Example usage",
+			"App.onTriggerObject.Add(function (player, layerID, x, y) {",
+			"\t// do something...",
+			"});"
+		]
+	},
+	// ScriptApp - Callbacks
+	"HELP: App.runLater": {
+		"prefix": "?App.runLater",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, that schedules the execution of a callback function after a specified period of time, measured in SECONDS.",
+			" * @param {number} time - The specific period of time, in SECONDS.",
+			" */",
+			"",
+			"// Example usage",
+			"let time = 3;",
+			"App.runLater(function () {",
+			"\t// do something...",
+			"}, time);"
+		]
+	},
+	"HELP: App.addOnTileTouched": {
+		"prefix": "?App.addOnTileTouched",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to set a function that executes when a player reaches a designated coordinates.",
+			" * @param {number} x - The designated X coordinate.",
+			" * @param {number} y - The designated Y coordinate.",
+			" * @param {ScriptPlayer} player - The player who has reached the designated coordinates.",
+			" */",
+			"",
+			"// Example usage",
+			"let x = 10;",
+			"let y = 10;",
+			"App.addOnTileTouched(x, y, function (player) {",
+			"\t// do something...",
+			"});"
+		]
+	},
+	"HELP: App.addOnLocationTouched": {
+		"prefix": "?App.addOnLocationTouched",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to set a function that executes when a player reaches a designated location.",
+			" * @param {string} locationName - The name of the designated location.",
+			" * @param {ScriptPlayer} player - The player who has reached the designated location.",
+			" */",
+			"",
+			"// Example usage",
+			"let locationName = 'myLocation';",
+			"App.addOnLocationTouched(locationName, function (player) { ",
+			"\t// do something...",
+			"});"
+		]
+	},
+	"HELP: App.addOnKeyDown": {
+		"prefix": "?App.addOnKeyDown",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to set a function that executes when a player presses a designated key on the keyboard.",
+			" * @param {number} keycode - The JavaScript keycode of the designated key.",
+			" * A: 65, B: 66, C: 67, D: 68, E: 69, F: 70, G: 71, H: 72, I: 73, J: 74",
+			" * K: 75, L: 76, M: 77, N: 78, O: 79, P: 80, Q: 81, R: 82, S: 83, T: 84",
+			" * U: 85, V: 86, W: 87, X: 88, Y: 89, Z: 90",
+			" * @param {ScriptPlayer} player - The player who pressed the designated key.",
+			" */",
+			"",
+			"// Example usage",
+			"App.addOnKeyDown(keycode, function (player) { ",
+			"\t// do something...",
+			"});"
+		]
+	},
+	"HELP: App.addMobileButton": {
+		"prefix": "?App.addMobileButton",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to add a custom mobile button, and to set a function that executes when a player presses the button.",
+			" * @param {number} anchorNumber - The number of the location for the custom mobile button.",
+			" * 0: TOP, 1: TOP_LEFT, 2: TOP_RIGHT, 3: MIDDLE, 4: MIDDLE_LEFT",
+			" * 5: MIDDLE_RIGHT, 6: BOTTOM, 7: BOTTOM_LEFT, 8: BOTTOM_RIGHT",
+			" * @param {number} offsetX - The X-direction offset of the custom mobile button.",
+			" * @param {number} offsetY - The Y-direction offset of the custom mobile button.",
+			" * @param {ScriptPlayer} player - The player who pressed the custom mobile button.",
+			" */",
+			"",
+			"// Example usage",
+			"App.addMobileButton(anchorNumber, offsetX, offsetY, function (player) { ",
+			"\t// do something...",
+			"});",
+		]
+	},
+	"HELP: App.putMobilePunch": {
+		"prefix": "?App.putMobilePunch",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to determine whether the mobile punch button is hidden.",
+			" * @param {boolean} enable - A boolean flag indicating whether to show the button.",
+			" */",
+			"",
+			"// Example usage",
+			"let enable = true;",
+			"App.putMobilePunch(false);"
+		]
+	},
+	// ScriptApp - Methods / UI
+	"HELP: App.loadSpritesheet": {
+		"prefix": "?App.loadSpritesheet",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to read a sprite sheet image file and convert it into an object.",
+			" * @param {string} filePath - The path of the file to be loaded.",
+			" * @param {number} [frameWidth] - The width of a single frame in pixels.",
+			" * @param {number} [frameHeight] - The height of a single frame in pixels.",
+			" * @param {(Array.<number>|Object.<string, Array.<number>>)} [animsArray] - An object containing arrays of frame image numbers to be used as animations.",
+			" * @param {number} [frameRate] - The number of frames to be displayed per second.",
+			" * @returns {ScriptDynamicResource}",
+			" */",
+			"",
+			"// Example usage",
+			"let filePath = 'sprites/myImg.png';",
+			"let frameWidth = 48;",
+			"let frameHeight = 64;",
+			"let animsArray = {",
+			"\tdown_idle: [0], down: [1, 2, 3, 4], down_jump: [28],",
+			"\tleft_idle: [5], left: [6, 7, 8, 9], left_jump: [29],",
+			"\tright_idle: [10], right: [11, 12, 13, 14], right_jump: [30],",
+			"\tup_idle: [15], up: [16, 17, 18, 19], up_jump: [31],",
+			"\tdance: [20, 21, 22, 23, 24, 25, 26, 27]",
+			"};",
+			"let frameRate = 16;",
+			"let sprite = App.loadSpritesheet(filePath, frameWidth, frameHeight, animsArray, frameRate);"
+		]
+	},
+	"HELP: App.showCenterLabel": {
+		"prefix": "?App.showCenterLabel",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to display text at a designated location for all players.",
+			" * @param {string} text - The text to be displayed on the label.",
+			" * @param {uint} [textColor=0xFFFFFF] - The color of the text to be displayed.",
+			" * @param {uint} [bgColor=0x000000] - The color of the label where the message is displayed.",
+			" * @param {number} [offset=0] - The offset value determines the position of the label. Larger values move the label closer to the bottom of the screen.",
+			" * @param {number} [time=3000] - The duration that the label is displayed, in milliseconds.",
+			" */",
+			"",
+			"// Example usage",
+			"let text = 'myText';",
+			"let textColor = 0xFFFFFF;",
+			"let bgColor = 0x000000;",
+			"let offset = 0;",
+			"let time = 3000;",
+			"App.showCenterLabel(text, textColor, bgColor, offset, time);"
+		]
+	},
+	"HELP: App.showCustomLabel": {
+		"prefix": "?App.showCustomLabel",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to display text at a designated location for all players. Allows decorating the text using <span> tags.",
+			" * @param {string} text - The text to be displayed on the label, with <span> tags allowed.",
+			" * @param {uint} [textColor=0xFFFFFF] - The color of the text to be displayed.",
+			" * @param {uint} [bgColor=0x000000] - The color of the label where the message is displayed.",
+			" * @param {number} [offset=0] - The offset value determines the position of the label. Larger values move the label closer to the bottom of the screen.",
+			" * @param {number} [width=100] - The width of the label, as a percentage of the screen width.",
+			" * @param {number} [opacity=0.6] - The transparency of the label, as a value between 0 and 1.",
+			" * @param {number} [time=3000] - The duration that the label is displayed, in milliseconds.",
+			" */",
+			"",
+			"// Example usage",
+			"let style ='font-weight: bold';",
+			"let text = `<span style=\"${style}\">Bold text</span> and plain text.`;",
+			"let textColor = 0xFFFFFF;",
+			"let bgColor = 0x000000;",
+			"let offset = 0;",
+			"let width = 100;",
+			"let opacity = 0.6;",
+			"let time = 3000;",
+			"App.showCustomLabel(text, textColor, bgColor, offset, width, opacity, time);"
+		]
+	},
+	"HELP: App.sayToAll": {
+		"prefix": "?App.sayToAll",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to display text in the chat window.",
+			" * @param {string} text - The text to be displayed.",
+			" * @param {uint} [textColor=0xFFFFFF] - The color of the text to be displayed.",
+			" */",
+			"",
+			"// Example usage",
+			"let text = 'myText';",
+			"let textColor = 0xFFFFFF;",
+			"App.sayToAll(text, textColor);"
+		]
+	},
+	"HELP: App.showWidget": {
+		"prefix": "?App.showWidget",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to load an HTML file as a widget and display it at the specified align position for all players.",
+			" * @param {string} filePath - The path of the HTML file to be loaded.",
+			" * @param {string} align - The position where to display the widget.",
+			" * 'popup', 'sidebar', 'top', 'topleft', 'topright', 'middle', 'middleleft', 'middleright', 'bottom', 'bottomleft', 'bottomright'",
+			" * @param {number} appWidth - The width of the area to display the widget, in pixels.",
+			" * @param {number} appHeight - he height of the area to display the widget, in pixels.",
+			" * @returns {ScriptWidget}",
+			" */",
+			"",
+			"// Example usage",
+			"let filePath = 'widget/myWidget.html';",
+			"let align = 'sidebar';",
+			"let appWidth = 400;",
+			"let appHeight = 300;",
+			"let widget = App.showWidget(filePath, align, appWidth, appHeight);"
+		]
+	},
+	"HELP: App.showYoutubeWidget": {
+		"prefix": "?App.showYoutubeWidget",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to display a YouTube video in a widget at the specified alignment for all players.",
+			" * @param {string} link - The URL of the YouTube video to display.",
+			" * @param {string} align - The alignment position where the widget will be displayed.",
+			" * 'popup', 'sidebar', 'top', 'topleft', 'topright', 'middle', 'middleleft', 'middleright', 'bottom', 'bottomleft', 'bottomright'",
+			" * @param {number} appWidth - The width of the area to display the widget, in pixels",
+			" * @param {number} appHeight - The height of the area to display the widget, in pixels",
+			" * @returns {ScriptWidget}",
+			" */",
+			"",
+			"// Example usage",
+			"let link = 'https://www.youtube.com/watch?v=WMxGnU5j4Hw';",
+			"let align = 'sidebar';",
+			"let appWidth = 400;",
+			"let appHeight = 300;",
+			"App.showYoutubeWidget(link, align, appWidth, appHeight);"
+		]
+	},
+	// ScriptApp - Methods / User Control
+	"HELP: App.spawnPlayer": {
+		"prefix": "?App.spawnPlayer",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to move the player corresponding to playerID to the specified tile coordinates.",
+			" * @param {string} playerID - The ID value of the target player.",
+			" * @param {number} tileX - The x coordinate to move the player.",
+			" * @param {number} tileY - The y coordinate to move the player.",
+			" */",
+			"",
+			"// Example usage",
+			"let playerID = player.id;",
+			"let tileX = 10;",
+			"let tileY = 10;",
+			"App.spawnPlayer(playerID, tileX, tileY);"
+		]
+	},
+	"HELP: App.kickPlayer": {
+		"prefix": "?App.kickPlayer",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to kick the player corresponding to playerID.",
+			" * The kicked user will not be able to access the 'space' for 24 hours.",
+			" * @param {string} playerID - The ID value of the target player.",
+			" */",
+			"",
+			"// Example usage",
+			"let playerID = player.id;",
+			"App.kickPlayer(playerID);"
+		]
+	},
+	"HELP: App.forceDestroy": {
+		"prefix": "?App.forceDestroy",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to shut down the mini-game app by force.",
+			" */",
+			"",
+			"// Example usage",
+			"App.forceDestroy();"
+		]
+	},
+	"HELP: App.clearChat": {
+		"prefix": "?App.clearChat",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to delete all chat history.",
+			" */",
+			"",
+			"// Example usage",
+			"App.clearChat();"
+		]
+	},
+	// ScriptApp - Methods / Sound
+	"HELP: App.playSound": {
+		"prefix": "?App.playSound",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to play a sound file to all players.",
+			" * @param {string} filePath - The path of the file to be loaded.",
+			" * @param {boolean} [loop=false] - A boolean flag indicating whether to play the file on repeat.",
+			" * @param {boolean} [overlap=false] - A boolean flag indicating whether the sound can overlap with others.",
+			" */",
+			"",
+			"// Example usage",
+			"let filePath = 'sounds/mySound.mp3';",
+			"let loop = false;",
+			"let overlap = false;",
+			"App.playSound(filePath, loop, overlap);"
+		]
+	},
+	"HELP: App.playSoundLink": {
+		"prefix": "?App.playSoundLink",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to play a sound corresponding to the given URL to all players.",
+			" * @param {string} fileURL - The URL of the sound file.",
+			" * @param {boolean} [loop=false] - A boolean flag indicating whether to play the file on repeat.",
+			" */",
+			"",
+			"// Example usage",
+			"let fileURL = 'https://zep.us/assets/sounds/ring.mp3';",
+			"let loop = false;",
+			"App.playSoundLink(fileURL, loop);"
+		]
+	},
+	"HELP: App.stopSound": {
+		"prefix": "?App.stopSound",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to stop all currently playing sounds.",
+			" */",
+			"",
+			"// Example usage",
+			"App.stopSound();"
+		]
+	},
+	"HELP: App.changeAttackSound": {
+		"prefix": "?App.changeAttackSound",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to change attack sound.",
+			" * @param {string} filePath - The path of the file to be loaded.",
+			" */",
+			"",
+			"// Example usage",
+			"let filePath = 'sounds/myAttackSound.mp3';",
+			"App.changeAttackSound(filePath);"
+		]
+	},
+	// ScriptApp - Methods / Communication
+	"HELP: App.httpGet": {
+		"prefix": "?App.httpGet",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to execute an HTTP GET request to the specified UR.",
+			" * @param {string} url - The URL to send the request to.",
+			" * @param {?object} headers - The headers to include in the request. (optional)",
+			" * @param {string} res - The response from the request.",
+			" */",
+			"",
+			"// Example usage",
+			"let url = 'https://your-target-url.com/';",
+			"let headers = { 'test-header': 'zep' };",
+			"App.httpGet(url, headers, function (res) { ",
+			"\tlet response = JSON.parse(res);",
+			"\t// do something...",
+			"});"
+		]
+	},
+	"HELP: App.httpPost": {
+		"prefix": "?App.httpPost",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to execute an HTTP POST request to the specified URL.",
+			" * @param {string} url - The URL to send the request to.",
+			" * @param {({}|object)} headers - The headers to include in the request.",
+			" * @param {?object} body - The body to include in the request as form data. (optional)",
+			" * @param {string} res - The response from the request.",
+			" */",
+			"",
+			"// Example usage",
+			"let url = 'https://your-target-url.com/';",
+			"let headers = { 'test-header': 'zep' };",
+			"let body = { 'test-body': 'zep' };",
+			"App.httpPost(url, headers, body, function (res) { ",
+			"\tlet response = JSON.parse(res);",
+			"\t// do something...",
+			"});"
+		]
+	},
+	"HELP: App.httpPostJson": {
+		"prefix": "?App.httpPostJson",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to execute an HTTP POST request to the specified URL.",
+			" * @param {string} url - The URL to send the request to.",
+			" * @param {({}|object)} headers - The headers to include in the request.",
+			" * @param {object} body - The JSON data to include in the request body.",
+			" * @param {string} res - The response from the request.",
+			" */",
+			"",
+			"// Example usage",
+			"let url = 'https://your-target-url.com/';",
+			"let headers = { 'test-header': 'zep' };",
+			"let body = { 'test-body': 'zep' };",
+			"App.httpPostJson(url, headers, body, function (res) { ",
+			"\tlet response = JSON.parse(res);",
+			"\t// do something...",
+			"});"
+		]
+	},
+	// ScriptApp - Methods / Common
+	"HELP: App.sendUpdated": {
+		"prefix": "?App.sendUpdated",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to apply any updated app-related field values when changes are made.",
+			" */",
+			"",
+			"// Example usage",
+			"App.sendUpdated();"
+		]
+	},
+	"HELP: App.save": {
+		"prefix": "?App.save",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to apply any updated app storage values when changes are made.",
+			" * NOTE: It is not recommended to use 'App.save', unless you only need to store and load static values or single 'map' based data.",
+			" */",
+			"",
+			"// Example usage",
+			"App.save();"
+		]
+	},
+	"HELP: App.setStroage": {
+		"prefix": "?App.setStroage",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, that complements the 'App.save' method for storing app data.",
+			" * NOTE: It is recommended to use 'App.setStroage', especially when you need to store and load dynamic values or multi 'map' based data.",
+			" */",
+			"",
+			"// Example usage",
+			"App.setStroage(JSON.stringify(variableName));"
+		]
+	},
+	"HELP: App.getStorage": {
+		"prefix": "?App.getStorage",
+		"body": [
+			"/**",
+			" * A method of ScriptApp, to synchronize app storage data across different 'maps' in the same 'space', ensuring they have the same data.",
+			" * NOTE: Since this method is executed asynchronously, it cannot guarantee synchronization if App.storage is called on the following line.",
+			" */",
+			"",
+			"// Example usage",
+			"App.getStorage(function () { ",
+			"\tlet appStorage = JSON.parse(App.storage);",
+			"\t// do something...",
+			"});"
+		]
+	}
+}

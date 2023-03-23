@@ -5,7 +5,8 @@ For more information about ZEP, visit the [official website of ZEP](https://zep.
 
 ## NOTES
 
-* This is **NOT** an official extension from ZEP.
+* This is **NOT** an official extension from ZEP, and is not endorsed or supported by ZEP.
+* Information provided may **NOT** be complete, correct, or up-to-date.
 * Only supports JavaScript documentation.
 
 ## Features
@@ -36,6 +37,15 @@ This extension generates snippets for writing ZEP Script.
     * App.emitChannels
     * App.onChannelMessage
     * App.getChannels
+
+### 0.0.3
+
+* Fixed some typos and syntax errors.
+* Added new snippets that provide detailed explanations for methods and fields.<br>
+To access these explanations, simply type "?" before the method or field name.
+
+    * e.g. Typing "?App.onInit" will provide a detailed description of the "onInit" method in the ScriptApp class.
+    * e.g. Typing "?player.sendUpdated" will provide a detailed description of the "sendUpdated" method in the ScriptPlayer class.
 
 ## Credits
 

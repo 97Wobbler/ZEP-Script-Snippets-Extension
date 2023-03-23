@@ -1,12 +1,11 @@
 // ZEP Script Snippets for ZEP Script Snippet Extension (ver. 0.0.1.)
 {
 	// Frequently Used Syntax/Functions
-
 	"forAllPlayers": {
 		"prefix": "ZSforAllPlayers",
 		"body": [
 			"for (let p of players) {",
-			"\t$1",
+			"\t$0",
 			"}"
 		]
 	},
@@ -15,7 +14,7 @@
 		"body": [
 			"let tag = player.tag;",
 			"",
-			"tag.property$1 = value$2;",
+			"tag.property = value$0;",
 			"",
 			"player.tag = tag;",
 			"player.sendUpdated();"
@@ -24,7 +23,7 @@
 	"initTag": {
 		"prefix": "ZSinitTag",
 		"body": [
-			"App.onJoinPlayer.Add(function(player){",
+			"App.onJoinPlayer.Add(function (player) {",
 			"\tinitTag(player);",
 			"});",
 			"",
@@ -42,7 +41,7 @@
 	"loadTag": {
 		"prefix": "ZSloadTag",
 		"body": [
-			"App.onJoinPlayer.Add(function(player){",
+			"App.onJoinPlayer.Add(function (player) {",
 			"\tloadTag(player);",
 			"});",
 			"",
@@ -68,11 +67,12 @@
 	"saveTag": {
 		"prefix": "ZSsaveTag",
 		"body": [
-			"App.onLeavePlayer.Add(function(player){",
+			"App.onLeavePlayer.Add(function (player) {",
 			"\tsaveTag(player);",
 			"});",
 			"",
 			"function saveTag(player) {",
+			"\t// closeWidget(player);",
 			"\tplayer.storage = JSON.stringify(player.tag);",
 			"\tplayer.save();",
 			"}"
@@ -81,10 +81,10 @@
 	"checkCustomData": {
 		"prefix": "ZScheckCustomData",
 		"body": [
-			"App.onJoinPlayer.Add(function(player){",
+			"App.onJoinPlayer.Add(function (player) {",
 			"\tcheckCutomData(player);",
 			"});",
-			"function checkCutomData(player){",
+			"function checkCutomData(player) {",
 			"\tif (!player.customData) return;",
 			"\tlet playerCustomData = JSON.parse(player.customData);",
 			"\tif (playerCustomData.hasOwnProperty(\"name\")) {",
@@ -97,7 +97,7 @@
 	"roleString": {
 		"prefix": "ZSroleString",
 		"body": [
-			"function roleString(player){",
+			"function roleString(player) {",
 			"\tconst ROLE = {",
 			"\t\t\"-1\": \"GUEST\",",
 			"\t\t\"0\": \"GUEST\",",
@@ -113,7 +113,7 @@
 	"isStaff": {
 		"prefix": "ZSisStaff",
 		"body": [
-			"function isStaff(player){",
+			"function isStaff(player) {",
 			"\tif (player.role < 1000) return false;",
 			"\treturn true;",
 			"}"
@@ -128,34 +128,31 @@
 			"\t\"email03@domain.com\",",
 			"\t// ...",
 			"];",
-			"function isInEmailList(player){",
-			"\tfor (let i in EMAIL_AUTH_LIST){",
-			"\t\tlet email = EMAIL_AUTH_LIST[i];",
+			"function isInEmailList(player) {",
+			"\tfor (let email of EMAIL_AUTH_LIST) {",
 			"\t\tif (player.isEmail(email)) return true;",
 			"\t}",
 			"\treturn false;",
 			"}"
 		]
 	},
-	"closeApp": {
-		"prefix": "ZScloseApp",
+	"closeWidget": {
+		"prefix": "ZScloseWidget",
 		"body": [
-			"function closeApp(player){",
-			"\tplayer.tag.app.destroy();",
-			"\tplayer.tag.app = null;",
-			"\tplayer.sendUpdate();",
+			"function closeWidget(player) {",
+			"\tplayer.tag.widget.destroy();",
+			"\tplayer.tag.widget = null;",
 			"}"
 		]
 	},
-	"openApp": {
-		"prefix": "ZSopenApp",
+	"openWidget": {
+		"prefix": "ZSopenWidget",
 		"body": [
-			"function openApp(player){",
-			"\tplayer.tag.app = player.showWidget(\"myHtml.html\", 'sidebar', appWidth, appHeight);",
-			"\tplayer.tag.app.sendMessage({",
+			"function openWidget(player) {",
+			"\tplayer.tag.widget = player.showWidget(\"myHtml.html\", 'sidebar', appWidth, appHeight);",
+			"\tplayer.tag.widget.sendMessage({",
 			"\t\ttype: \"init\",",
 			"\t})",
-			"\tplayer.sendUpdate();",
 			"}"
 		]
 	},
@@ -168,23 +165,23 @@
 			"\tkeywordC : \"C\",",
 			"};",
 			"",
-			"App.onSay.Add(function(player, text) {",
+			"App.onSay.Add(function (player, text) {",
 			"\tif (!text.startsWith(\"!\") || text == \"!\") return;",
 			"",
 			"\tconst SEPARATOR = \" \";",
 			"\tlet command = text.split(SEPARATOR)[0];",
-			"\tlet paramString = text.slice(command.length + 1);",
-			"\tlet param = paramStr.split(SEPARATOR);",
+			"\tlet paramString = text.slice(command.length + SEPARATOR.length);",
+			"\tlet param = paramString.split(SEPARATOR);",
 			"",
 			"\tswitch (command) {",
 			"\t\tcase APP_DEBUG_KEYWORD.keywordA :",
-			"\t\t\t// atKeywordA(param[0]);",
+			"\t\t\t// onKeywordA(param[0]);",
 			"\t\t\tbreak;",
 			"\t\tcase APP_DEBUG_KEYWORD.keywordB :",
-			"\t\t\t// atKeywordB(param[0], param[1]);",
+			"\t\t\t// onKeywordB(param[0], param[1]);",
 			"\t\t\tbreak;",
 			"\t\tcase APP_DEBUG_KEYWORD.keywordC :",
-			"\t\t\t// atKeywordC(paramStr);",
+			"\t\t\t// onKeywordC(paramString);",
 			"\t\t\tbreak;",
 			"\t}",
 			"});"
@@ -206,7 +203,7 @@
 			"let timer;",
 			"",
 			"const PERIOD_SECONDS = 1;",
-			"let periodTimer = 0;",
+			"let periodTimer;",
 			"",
 			"let isTimerOn = false;",
 			"let isTimerPaused = false;",
@@ -215,10 +212,11 @@
 			"initTimer();",
 			"",
 			"function initTimer() {",
-			"\ttimer = init_timer;",
+			"\ttimer = INIT_TIMER;",
 			"",
-			"\tsecondTimer = 0;",
+			"\tperiodTimer = 0;",
 			"",
+			"\tisTimerOn = false;",
 			"\tisTimerPaused = false;",
 			"\thasTimerFinished = false;",
 			"}",
@@ -243,7 +241,7 @@
 			"\t//...",
 			"}",
 			"",
-			"App.onUpdate.Add(function(dt){",
+			"App.onUpdate.Add(function (dt) {",
 			"\tif (!isTimerOn) return;",
 			"",
 			"\ttimer -= dt;",

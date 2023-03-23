@@ -1,4 +1,3 @@
-// ZEP Script Snippets for ZEP Script Snippet Extension (ver. 0.0.1.)
 {
 	// ScriptPlayer - Field
 	"player.id": {
@@ -8,16 +7,20 @@
 	"player.name": {
 		"prefix": "player.name",
 		"body": [
-			"player.name = \"new name$1\"",
-			"// player.sendUpdated();"
+			"player.name = 'new name$1'",
+			"player.sendUpdated();"
 		]
 	},
 	"player.title": {
 		"prefix": "player.title",
 		"body": [
-			"player.title = \"new title$1\"",
-			"// player.sendUpdated();"
+			"player.title = 'new title$1'",
+			"player.sendUpdated();"
 		]
+	},
+	"player.role": {
+		"prefix": "player.role",
+		"body": "player.role"
 	},
 	"player.tileX": {
 		"prefix": "player.tileX",
@@ -35,37 +38,37 @@
 		"prefix": "player.moveSpeed",
 		"body": [
 			"player.moveSpeed = 120$1 // default: 90",
-			"// player.sendUpdated();"
+			"player.sendUpdated();"
 		]
 	},
 	"player.sprite": {
 		"prefix": "player.sprite",
 		"body": [
 			"player.sprite = spriteName$1",
-			"// player.sendUpdated();"
+			"player.sendUpdated();"
 		]
 	},
 	"player.tag": {
 		"prefix": "player.tag",
 		"body": [
 			"player.tag = {",
-			"\tapp: null,$1",
+			"\twidget: null,$1",
 			"}",
-			"// player.sendUpdated();"
+			"player.sendUpdated();"
 		]
 	},
 	"player.hidden": {
 		"prefix": "player.hidden",
 		"body": [
 			"player.hidden = true$1; // default: false",
-			"// player.sendUpdated();"
+			"player.sendUpdated();"
 		]
 	},
 	"player.spotlight": {
 		"prefix": "player.spotlight",
 		"body": [
 			"player.spotlight = true$1; // default: false",
-			"// player.sendUpdated();"
+			"player.sendUpdated();"
 		]
 	},
 	"player.disableVideo": {
@@ -80,14 +83,14 @@
 		"prefix": "player.attackType",
 		"body": [
 			"player.attackType = 2$1; // 0: default attack type, 2: ranged attack type",
-			"// player.sendUpdated();"
+			"player.sendUpdated();"
 		]
 	},
 	"player.attackParam1": {
 		"prefix": "player.attackParam1",
 		"body": [
 			"player.attackParam1 = 10$1; // default: 1",
-			"// player.sendUpdated();"
+			"player.sendUpdated();"
 		]
 	},
 	"player.attackParam2": {
@@ -95,14 +98,14 @@
 		"body": [
 			"player.attackType = 2$1;",
 			"player.attackParam2 = 5$2;",
-			"// player.sendUpdated();"
+			"player.sendUpdated();"
 		]
 	},
 	"player.attackSprite": {
 		"prefix": "player.attackSprite",
 		"body": [
 			"player.attackSprite = spriteName$1;",
-			"// player.sendUpdated();"
+			"player.sendUpdated();"
 		]
 	},
 	"player.walletAddress": {
@@ -136,7 +139,7 @@
 		"prefix": "player.displayRatio",
 		"body": [
 			"player.displayRatio = 0.8; // default: 1",
-			"// player.sendUpdated();"
+			"player.sendUpdated();"
 		]
 	},
 	"player.titleColor": {
@@ -158,29 +161,29 @@
 	// ScriptPlayer - Methods / UI
 	"player.showCenterLabel": {
 		"prefix": "player.showCenterLabel",
-		"body": "player.showCenterLabel(\"text$1\", 0xFFFFFF$2, 0x000000, 0, 3000$3);"
+		"body": "player.showCenterLabel('text$1', 0xFFFFFF$2, 0x000000, 0, 3000$3);"
 	},
 	"player.showCustomLabel": {
-		"prefix": "player.customLabel",
-		"body": "player.showCustomLabel(\"text$1\", 0xFFFFFF$2, 0x000000, 0, 100, 0.6, 3000$3);"
+		"prefix": "player.showCustomLabel",
+		"body": "player.showCustomLabel('text$1', 0xFFFFFF$2, 0x000000, 0, 100, 0.6, 3000$3);"
 	},
 	"player.showWidget": {
 		"prefix": "player.showWidget",
 		"body": [
 			"// align value: 'popup', 'sidebar', 'top', 'topleft', 'topright', 'middle', 'middleleft', 'middleright', 'bottom', 'bottomleft', 'bottomright'",
-			"player.showWidget(\"myHtml$1.html\", 'sidebar$2', appWidth$3, appHeight$4);"
+			"player.showWidget('myHtml$1.html', 'sidebar$2', appWidth$3, appHeight$4);"
 		]
 	},
 	"player.showWidgetResponsive": {
 		"prefix": "player.showWidgetResponsive",
 		"body": [
-			"player.showWidgetResponsive(\"myHtml$1.html\", marginTopInPercent$2, marginRightInPercent$3, marginBottomInPercent$4, marginLeftInPercent$5);"
+			"player.showWidgetResponsive('myHtml$1.html', marginTopInPercent$2, marginRightInPercent$3, marginBottomInPercent$4, marginLeftInPercent$5);"
 		]
 	},
 	"player.showBuyAlert": {
 		"prefix": "player.showBuyAlert",
 		"body": [
-			"player.showBuyAlert(itemName, price, function(){",
+			"player.showBuyAlert(itemName, price, function () {",
 			"\t$2",
 			"});"
 		]
@@ -189,26 +192,26 @@
 		"prefix": "player.showYoutubeWidget",
 		"body": [
 			"// align value: 'popup', 'sidebar', 'top', 'topleft', 'topright', 'middle', 'middleleft', 'middleright', 'bottom', 'bottomleft', 'bottomright'",
-			"player.showYoutubeWidget(\"https://www.youtube.com/watch?v=WMxGnU5j4Hw$1\", 'sidebar$2', appWidth$3, appHeight$4);"
+			"player.showYoutubeWidget('https://www.youtube.com/watch?v=WMxGnU5j4Hw$1', 'sidebar$2', appWidth$3, appHeight$4);"
 		]
 	},
 	"player.openWebLink": {
 		"prefix": "player.openWebLink",
 		"body": [
 			"// 2nd parameter - popup / true: open URL in a popup modal, false: open URL in a new tab",
-			"player.openWebLink(\"https://www.youtube.com/watch?v=WMxGnU5j4Hw$1\", true);"
+			"player.openWebLink('https://www.youtube.com/watch?v=WMxGnU5j4Hw$1', true);"
 		]
 	},
 	"player.sendMessage": {
 		"prefix": "player.sendMessage",
-		"body": "player.sendMessage(\"text$1\", 0xFFFFFF);"
+		"body": "player.sendMessage('text$1', 0xFFFFFF);"
 	},
 	"player.showPrompt": {
 		"prefix": "player.showPrompt",
 		"body": [
-			"player.showPrompt(\"text$1\", function(inputText){",
+			"player.showPrompt('text$1', function (inputText) {",
 			"\tswitch (inputText) {",
-			"\t\tcase \"condition$2\" :",
+			"\t\tcase 'condition$2' :",
 			"\t\t\t//...$3",
 			"\t\t\tbreak;",
 			"\t\tdefault :",
@@ -221,7 +224,7 @@
 	"player.showConfirm": {
 		"prefix": "player.showConfirm",
 		"body": [
-			"player.showConfirm(\"text$1\", function(result){",
+			"player.showConfirm('text$1', function (result) {",
 			"\t$2",
 			"});"
 		]
@@ -229,7 +232,7 @@
 	"player.showAlert": {
 		"prefix": "player.showAlert",
 		"body": [
-			"player.showAlert(\"text$1\", function(){",
+			"player.showAlert('text$1', function () {",
 			"\t$2",
 			"});"
 		]
@@ -241,7 +244,7 @@
 	// ScriptPlayer - Methods / Data Load
 	"player.isEmail": {
 		"prefix": "player.isEmail",
-		"body": "player.isEmail(\"email@domain.com$1\");"
+		"body": "player.isEmail('email@domain.com$1');"
 	},
 	"player.getLocationName": {
 		"prefix": "player.getLocationName",
@@ -259,7 +262,7 @@
 		"prefix": "player.spawnAtLocation",
 		"body": [
 			"// 2nd parameter - direction / 1: Left, 2: Up, 3: Right, 4: Down, 5: Top-Left, 6: Bottom-Left, 7: Top-Right, 8: Bottom-Right",
-			"player.spawnAtLocation(\"locationName$1\", 0$2);"
+			"player.spawnAtLocation('locationName$1', 0$2);"
 		]
 	},
 	"player.spawnAtMap": {
@@ -272,14 +275,14 @@
 		"body": [
 			"// 2nd parameter - loop / true: play on repeat, false: play once / default: false",
 			"// 3rd parameter - overlap / true: can overlap with others, false: CANNOT overlap with others / default: false",
-			"player.playSound(\"mySound$1.wav\", false, false);"
+			"player.playSound('mySound$1.wav', false, false);"
 		]
 	},
 	"player.playSoundLink": {
 		"prefix": "player.playSoundLink",
 		"body": [
 			"// 2nd parameter - loop / true: play on repeat, false: play once / default: false",
-			"player.playSoundLink(\"https://zep.us/assets/sounds/ring.mp3$1\", false);"
+			"player.playSoundLink('https://zep.us/assets/sounds/ring.mp3$1', false);"
 		]
 	},
 	// ScriptPlayer - Methods / Common

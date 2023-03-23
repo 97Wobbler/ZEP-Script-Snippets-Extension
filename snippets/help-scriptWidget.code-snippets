@@ -1,0 +1,53 @@
+{
+	// ScriptWidget - Event Listeners
+	"widget.onMessage": {
+		"prefix": "onMessage",
+		"body": [
+			"/**",
+			" * A method of ScriptWidget, to set a function that executes when messages sent from widget are received on the 'app'.",
+			" * In other words, the callback function will be executed when the 'app' received messages from the widget.",
+			" * @param {ScriptPlayer} targetPlayer - The player who onws the widget.",
+			" * @param {object} data - The message sent from the widget to the 'app'.",
+			" */",
+			"",
+			"// Example usage",
+			"player.tag.widget = player.showWidget('myWidget.html', 'sidebar', 400, 300);",
+			"player.tag.widget.onMessage.Add(function (targetPlayer, data) {",
+			"\tlet type = data.type;",
+			"\tswitch(type) {",
+			"\t\tcase 'exit':",
+			"\t\t\t// closeApp(targetPlayer);",
+			"\tbreak;",
+			"\t\tdefault:",
+			"\t\t\t// ...",
+			"\t\t\tbreak;",
+			"\t}",
+			"});"
+		]
+	},
+	// ScriptWidget - Methods
+	"widget.sendMessage": {
+		"prefix": "sendMessage",
+		"body": [
+			"/**",
+			" * A method of ScriptWidget, to send data to the widget from the 'app'.",
+			" * @param {any} object - The data being sent to the widget from the 'app'.",
+			" */",
+			"",
+			"// Example usage",
+			"player.tag.widget = player.showWidget('myWidget.html', 'sidebar', 400, 300);",
+			"player.tag.widget.sendMessage({ type: 'init', title: 'Initial Title', description: 'This is the initial description.' });"
+		]
+	},
+	"widget.destroy": {
+		"prefix": "destroy",
+		"body": [
+			"/**",
+			" * A method of ScriptWidget, to close the widget.",
+			" */",
+			"",
+			"// Example usage",
+			"player.tag.widget.destroy();"
+		]
+	}
+}

@@ -1,0 +1,533 @@
+{
+	// ScriptMap - Field
+	"HELP: Map.width": {
+		"prefix": "?Map.width",
+		"body": [
+			"/**",
+			" * A field of ScriptMap. The width of the current 'map'.",
+			" * @readonly",
+			" * @type {number}",
+			" */",
+			"",
+			"// Example usage",
+			"const MAP_WIDTH = Map.width;"
+		]
+	},
+	"HELP: Map.height": {
+		"prefix": "?Map.height",
+		"body": [
+			"/**",
+			" * A field of ScriptMap. The height of the current 'map'.",
+			" * @readonly",
+			" * @type {number}",
+			" */",
+			"",
+			"// Example usage",
+			"const MAP_HEIGHT = Map.height"
+		]
+	},
+	// ScriptMap - Methods
+	"HELP: Map.putTileEffect": {
+		"prefix": "?Map.putTileEffect",
+		"body": [
+			"/**",
+			" * A method of ScriptMap, to apply a tile effect to the specified coordinates.",
+			" * @param {number} x - The x coordinate where to apply the tile effect.",
+			" * @param {number} y - The y coordinate where to apply the tile effect.",
+			" * @param {TileEffectType} type - The type of tile effect to apply.",
+			" * NONE, IMPASSABLE, SPAWN, PORTAL, SPACE_PORTAL, EMBED, WEB_PORTAL, TILE_EMBED, PRIVATE_AREA, LOCATION, AMBIENT_SOUND",
+			" * @param {object} [option] - The detailed settings of the tile effect.",
+			" * For detailed explanation, type '?TileEffect.NONE', '?TileEffect.IMPASSABLE', '?TileEffect.SPAWN' and so on.",
+			" */",
+			"",
+			"// Example usage",
+			"Map.putTileEffect(x, y, type, option);"
+		]
+	},
+	"HELP: TileEffect.NONE": {
+		"prefix": "?TileEffect.NONE",
+		"body": [
+			"/**",
+			" * Erases tile effects at the specified coordinates.",
+			" */",
+			"",
+			"// Example usage",
+			"let x = 10;",
+			"let y = 10;",
+			"let type = TileEffectType.NONE;",
+			"Map.putTileEffect(x, y, type);"
+		]
+	},
+	"HELP: TileEffect.IMPASSABLE": {
+		"prefix": "?TileEffect.IMPASSABLE",
+		"body": [
+			"/**",
+			" * Sets an IMPASSABLE tile effect at the corresponding coordinates.",
+			" */",
+			"",
+			"// Example usage",
+			"let x = 10;",
+			"let y = 10;",
+			"let type = TileEffectType.IMPASSABLE;",
+			"Map.putTileEffect(x, y, type);"
+		]
+	},
+	"HELP: TileEffect.SPAWN": {
+		"prefix": "?TileEffect.SPAWN",
+		"body": [
+			"/**",
+			" * Sets a SPAWN tile effect at the corresponding coordinates.",
+			" */",
+			"",
+			"// Example usage",
+			"let x = 10;",
+			"let y = 10;",
+			"let type = TileEffectType.SPAWN;",
+			"Map.putTileEffect(x, y, type);"
+		]
+	},
+	"HELP: TileEffect.PORTAL(within the map)": {
+		"prefix": "?TileEffect.PORTAL",
+		"body": [
+			"/**",
+			" * Installs a portal tile that links to another 'map' within the same 'space'.",
+			" * @param {number} option.type - A number flag indicating whether the portal is towards another 'map' within the same 'space'.",
+			" * Use '0' for another 'map' in the same 'space', and use '1' for a location on the current 'map'.",
+			" * @param {string} option.targetMapID - The ID value of the target 'map'.",
+			" * @param {string} [option.locationName] - The name of the target location.",
+			" * @param {string} [option.label] - The text to display over the portal.",
+			" * @param {boolean} [option.triggerByTouch=false] - A boolean flag indicating whether to activate immediately when an avatar touches the portal, or when the player enters an interaction command.",
+			" * @param {boolean} [option.invisible=false] - A boolean flag indicating whether to hide the default portal image.",
+			" */",
+			"",
+			"// Example usage",
+			"let x = 10;",
+			"let y = 10;",
+			"let type = TileEffectType.PORTAL;",
+			"let option = {",
+			"\ttype: 0,",
+			"\ttargetMapID: 'Abc012',",
+			"\tlocationName: 'myLocation',",
+			"\tlabel: 'Enter Here',",
+			"\ttriggerByTouch: true,",
+			"\tinvisible: true",
+			"};",
+			"Map.putTileEffect(x, y, type, option);"
+		]
+	},
+	"HELP: TileEffect.PORTAL(outside the map)": {
+		"prefix": "?TileEffect.PORTAL",
+		"body": [
+			"/**",
+			" * Installs a portal tile that links to a location on the current 'map'..",
+			" * @param {number} option.type - A number flag indicating whether the portal is towards another 'map' within the same 'space'.",
+			" * Use '0' for another 'map' in the same 'space', and use '1' for a location on the current 'map'.",
+			" * @param {string} option.locationName - The name of the target location.",
+			" * @param {string} [option.label] - The text to display over the portal.",
+			" * @param {boolean} [option.triggerByTouch=false] - A boolean flag indicating whether to activate immediately when an avatar touches the portal, or when the player enters an interaction command.",
+			" * @param {boolean} [option.invisible=false] - A boolean flag indicating whether to hide the default portal image.",
+			" */",
+			"",
+			"// Example usage",
+			"let x = 10;",
+			"let y = 10;",
+			"let type = TileEffectType.PORTAL;",
+			"let option = {",
+			"\ttype: 1,",
+			"\tlocationName: 'myLocation',",
+			"\tlabel: 'Enter Here',",
+			"\ttriggerByTouch: true,",
+			"\tinvisible: true",
+			"};",
+			"Map.putTileEffect(x, y, type, option);"
+		]
+	},
+	"HELP: TileEffect.SPACE_PORTAL": {
+		"prefix": "?TileEffect.SPACE_PORTAL",
+		"body": [
+			"/**",
+			" * Installs a portal tile that links to another 'map' in another 'space'.",
+			" * @param {string} option.targetMapID - The ID value of the target 'map'.",
+			" * @param {string} [option.locationName] - The name of the target location.",
+			" * @param {string} [option.label] - The text to display over the portal.",
+			" * @param {boolean} [option.triggerByTouch=false] - A boolean flag indicating whether to activate immediately when an avatar touches the portal, or when the player enters an interaction command.",
+			" * @param {boolean} [option.invisible=false] - A boolean flag indicating whether to hide the default portal image.",
+			" */",
+			"",
+			"// Example usage",
+			"let x = 10;",
+			"let y = 10;",
+			"let type = TileEffectType.SPACE_PORTAL;",
+			"let option = {",
+			"\ttargetMapID: 'Abc012',",
+			"\tlocationName: 'myLocation',",
+			"\tlabel: 'Enter Here',",
+			"\ttriggerByTouch: true,",
+			"\tinvisible: true",
+			"};",
+			"Map.putTileEffect(x, y, type, option);"
+		]
+	},
+	"HELP: TileEffect.EMBED": {
+		"prefix": "?TileEffect.EMBED",
+		"body": [
+			"/**",
+			" * Installs a portal tile that opens a web link in a new popup modal.",
+			" * @param {string} option.link - The web URL to open.",
+			" * @param {string} option.align2 - The position to show the modal.",
+			" * 'popup', 'sidebar', 'top', 'topleft', 'topright', 'middle', 'middleleft', 'middleright', 'bottom', 'bottomleft', 'bottomright'",
+			" * @param {string} [option.label] - The text to display over the portal.",
+			" * @param {boolean} [option.triggerByTouch=false] - A boolean flag indicating whether to activate the portal immediately when an avatar touches it, or when the player enters an interaction command.",
+			" * @param {boolean} [option.invisible=false] - A boolean flag indicating whether to hide the default portal image.",
+			" */",
+			"",
+			"// Example usage",
+			"let x = 10;",
+			"let y = 10;",
+			"let type = TileEffectType.EMBED;",
+			"let option = {",
+			"\tlink: 'https://zep.us/home/landing',",
+			"\talign2: 'top',",
+			"\tlabel: 'ZEP-SCRIPT-EMBED',",
+			"\ttriggerByTouch: true,",
+			"\tinvisible: true",
+			"};",
+			"Map.putTileEffect(x, y, type, option);"
+		]
+	},
+	"HELP: TileEffect.WEB_PORTAL": {
+		"prefix": "?TileEffect.WEB_PORTAL",
+		"body": [
+			"/**",
+			" * Installs a portal tile that opens a web link in a new popup modal.",
+			" * @param {string} option.link - The web URL to open.",
+			" * @param {string} [option.label] - The text to display over the portal.",
+			" * @param {boolean} [option.invisible=false] - A boolean flag indicating whether to hide the default portal image.",
+			" */",
+			"",
+			"// Example usage",
+			"let x = 10;",
+			"let y = 10;",
+			"let type = TileEffectType.WEB_PORTAL;",
+			"let option = {",
+			"\tlink: 'https://zep.us/home/landing',",
+			"\tlabel: 'ZEP-SCRIPT-WEB-PORTAL',",
+			"\tinvisible: true",
+			"};",
+			"Map.putTileEffect(x, y, type, option);"
+		]
+	},
+	"HELP: TileEffect.TILE_EMBED": {
+		"prefix": "?TileEffect.TILE_EMBED",
+		"body": [
+			"/**",
+			" * Installs a tile effect that embeds a web URL in a designated area.",
+			" * @param {string} option.link - The web URL to embed.",
+			" * @param {number} option.width - The width of the designated area, in tiles.",
+			" * @param {number} option.height - The height of the designated area, in tiles.",
+			" */",
+			"",
+			"// Example usage",
+			"let x = 10;",
+			"let y = 10;",
+			"let type = TileEffectType.TILE_EMBED;",
+			"let option = {",
+			"\tlink: 'https://zep.us/home/landing',",
+			"\twidth: 16,",
+			"\theight: 9",
+			"};",
+			"Map.putTileEffect(x, y, type, option);"
+		]
+	},
+	"HELP: TileEffect.PRIVATE_AREA": {
+		"prefix": "?TileEffect.PRIVATE_AREA",
+		"body": [
+			"/**",
+			" * Installs a private area in the designated coordinates.",
+			" * @param {number} option.id - The ID value of the private area.",
+			" * @param {boolean} [option.impassable=false] - A boolean flag indicating whether to set the tile impassable.",
+			" * @param {string} [option.param1 = 'false'] - A string parameter that, if set to 'true', allows only one person per tile.",
+			" */",
+			"",
+			"// Example usage",
+			"let x = 10;",
+			"let y = 10;",
+			"let type = TileEffectType.PRIVATE_AREA;",
+			"let option = {",
+			"\tid: 1,",
+			"\timpassable: true,",
+			"\tparam1: 'true'",
+			"};",
+			"Map.putTileEffect(x, y, type, option);"
+		]
+	},
+	"HELP: TileEffect.LOCATION": {
+		"prefix": "?TileEffect.LOCATION",
+		"body": [
+			"/**",
+			" * Installs a map location in the designated coordinates.",
+			" * @param {string} [option.label] - The text to display over the location.",
+			" * @param {string} option.name - The name of the location.",
+			" * @param {number} option.width - The width of the designated area, in tiles.",
+			" * @param {number} option.height - The height of the designated area, in tiles.",
+			" */",
+			"",
+			"// Example usage",
+			"let x = 10;",
+			"let y = 10;",
+			"let type = TileEffectType.LOCATION;",
+			"let option = {",
+			"\tlabel: 'New Location',",
+			"\tname: 'myLocation',",
+			"\twidth: 3,",
+			"\theight: 2",
+			"};",
+			"Map.putTileEffect(x, y, type, option);"
+		]
+	},
+	"HELP: TileEffect.AMBIENT_SOUND": {
+		"prefix": "?TileEffect.AMBIENT_SOUND",
+		"body": [
+			"/**",
+			" * Installs a tile effect for ambient sound, in the designated coordinates.",
+			" * @param {string} option.link - The path of the sound file to play.",
+			" * @param {number} option.activeDistance - The radius of ambient sound, in tiles.",
+			" * @param {boolean} [option.triggerByTouch=false] - A boolean flag indicating whether to activate immediately when the avatar of a player reaches it, or when the player enters an interaction command.",
+			" */",
+			"",
+			"// Example usage",
+			"let x = 10;",
+			"let y = 10;",
+			"let type = TileEffectType.AMBIENT_SOUND;",
+			"let option = {",
+			"\tlink: 'sounds/background.mp3',",
+			"\tactiveDistance: 1,",
+			"\ttriggerByTouch: true",
+			"};",
+			"Map.putTileEffect(x, y, type, option);"
+		]
+	},
+	"HELP: Map.putObject": {
+		"prefix": "?Map.putObject",
+		"body": [
+			"/**",
+			" * A method of ScriptMap, to place an object, that can be called with its coordinates.",
+			" * NOTE: If multiple objects are placed at the same coordinates using 'Map.putObject', only the last one can be called with its coordinates.",
+			" * @param {number} x - The x coordinate at which to place the object.",
+			" * @param {number} y - The y coordinate at which to place the object.",
+			" * @param {?ScriptDynamicResource} sprite - A return value from the method 'App.loadSpritesheet'. Use 'null' to delete an object that has already been placed.",
+			" * @param {object} [option] - The detailed settings for the object.",
+			" * @param {boolean} [option.overlap=false] - A boolean flag indicating whether this object can trigger 'onObjectTouched' or 'onObjectAttacked' when touched or attacked.",
+			" */",
+			"",
+			"// Example usage",
+			"let x = 10;",
+			"let y = 10;",
+			"let sprite = App.loadSpritesheet('mySpritesheet.png');",
+			"let option = { overlap: true };",
+			"Map.putObject(x, y, spriteName, option);"
+		]
+	},
+	"HELP: Map.playObjectAnimation": {
+		"prefix": "?Map.playObjectAnimation",
+		"body": [
+			"/**",
+			" * A method of ScriptMap, to execute sprite animation of a 'script-placed object with NO key'. This calls the target object with a set of coordinates.",
+			" * @param {number} x - The x coordinate of the object.",
+			" * @param {number} y - The y coordinate of the object.",
+			" * @param {string} spriteID - The ID value of the dynamic resource proceeded by '#'. Should be a form of `#${sprite.id}`.",
+			" */",
+			"",
+			"// Example usage",
+			"let x = 10;",
+			"let y = 10;",
+			"let sprite = App.loadSpritesheet('mySpritesheet.png', 48, 64, [0, 1, 2, 3], 16);",
+			"let spriteID = '#' + sprite.id;",
+			"Map.playObjectAnimation(x, y, spriteID);"
+		]
+	},
+	"HELP: Map.moveObject": {
+		"prefix": "?Map.moveObject",
+		"body": [
+			"/**",
+			" * A method of ScriptMap, to move a 'script-placed object with NO key'. This calls the target object with a set of coordinates.",
+			" * @param {number} x - The x coordinate of the object.",
+			" * @param {number} y - The y coordinate of the object.",
+			" * @param {number} targetX - The x coordinate of the target location.",
+			" * @param {number} targetY - The y coordinate of the target location.",
+			" * @param {number} time - The time to reach the target location, in SECONDS.",
+			" */",
+			"",
+			"// Example usage",
+			"let x = 10;",
+			"let y = 10;",
+			"let targetX = 15;",
+			"let targetY = 15;",
+			"let time = 5;",
+			"Map.moveObject(x, y, targetX, targetY, time);"
+		]
+	},
+	"HELP: Map.putObjectWithKey": {
+		"prefix": "?Map.putObjectWithKey",
+		"body": [
+			"/**",
+			" * A method of ScriptMap, to place an object, that can be called with its key value.",
+			" * NOTE: If multiple objects are placed with the same key using 'Map.putObjectWithKey', only the last one can be called with its key value.",
+			" * @param {number} x - The x coordinate at which to place the object.",
+			" * @param {number} y - The y coordinate at which to place the object.",
+			" * @param {?ScriptDynamicResource} sprite - A return value from the method 'App.loadSpritesheet'. Use 'null' to delete an object that has already been placed.",
+			" * @param {object} option - The detailed settings for the object.",
+			" * @param {string} option.key - The key value of the object, used when calling the object with 'Map.moveObjectWithKey' or 'Map.playObjectAnimationWithKey'.",
+			" * @param {boolean} [option.overlap=false] - A boolean flag indicating whether this object can trigger 'onAppObjectTouched' when touched.",
+			" * @param {boolean} [option.useDirAnim=false] - A boolean flag indicating whether to use 'left', 'right', 'down', 'up' animations like an avatar while moving.",
+			" * @param {number} [option.moveSpeed = 90] - The speed of the object when moving.",
+			" */",
+			"",
+			"// Example usage",
+			"let x = 10;",
+			"let y = 10;",
+			"let sprite = App.loadSpritesheet('mySpritesheet.png', 48, 64, { down: [0, 1, 2], left: [3, 4, 5], right: [6, 7, 8], up: [9, 10, 11] }, 16);",
+			"let option = {",
+			"\tkey: 'objectKeyName',",
+			"\toverlap: true,",
+			"\tuseDirAnim: true,",
+			"\tmoveSpeed: 90",
+			"};",
+			"Map.putObjectWithKey(x, y, sprite, option});"
+		]
+	},
+	"HELP: Map.getObjectWithKey": {
+		"prefix": "?Map.getObjectWithKey",
+		"body": [
+			"/**",
+			" * A method of ScriptMap, to retrieves the JSON data of a 'script-placed object with key'. This calls the target object with its value.",
+			" * @param {string} key - The key value of the object to retrieve information from.",
+			" * @return {object} - The JSON data of the object.",
+			" */",
+			"",
+			"// Example usage",
+			"let key = 'objectKeyName';",
+			"let targetObject = Map.getObjectWithKey(key);"
+		]
+	},
+	"HELP: Map.playObjectAnimationWithKey": {
+		"prefix": "?Map.playObjectAnimationWithKey",
+		"body": [
+			"/**",
+			" * A method of ScriptMap, to play a sprite animation of a 'script-placed object with key'. This calls the target object with its value.",
+			" * @param {string} key - The key value of the object.",
+			" * @param {string} animName - The name of the animation, which corresponds to a property name in the 'animsArray' parameter of the 'App.loadSpritesheet' method.",
+			" * @param {number} loop - The number of times to repeat the animation. Use '-1' for infinite loop.",
+			" */",
+			"",
+			"// Example usage",
+			"let sprite = App.loadSpritesheet('mySpritesheet.png', 48, 64, { actionA : [0, 1, 2, 3], actionB: [4, 5, 6, 7], actionC: [8, 9, 0] }, 16);",
+			"Map.putObjectWithKey(10, 10, sprite, { key: 'objectKeyName' });",
+			"",
+			"let key = 'objectKeyName';",
+			"let animName = 'actionA';",
+			"let loop = -1;",
+			"Map.playObjectAnimationWithKey(key, animName, loop);"
+		]
+	},
+	"HELP: Map.moveObjectWithKey": {
+		"prefix": "?Map.moveObjectWithKey",
+		"body": [
+			"/**",
+			" * A method of ScriptMap, to move a 'script-placed object with key'. This calls the target object with its key value.",
+			" * @param {string} key - The key value of the object.",
+			" * @param {number} targetX - The x coordinate of the target location.",
+			" * @param {number} targetY - The y coordinate of the target location.",
+			" * @param {boolean} usePath - A boolean flag indicating whether to move along passable coordinates only.",
+			" */",
+			"",
+			"// Example usage",
+			"let key = 'objectKeyName';",
+			"let targetX = 15;",
+			"let targetY = 15;",
+			"let usePath = true;",
+			"Map.moveObjectWithKey(key, targetX, targetY, usePath);"
+		]
+	},
+	"HELP: Map.clearAllObjects": {
+		"prefix": "?Map.clearAllObjects",
+		"body": [
+			"/**",
+			" * A method of ScriptMap, to remove all the script-placed objects.",
+			" */",
+			"",
+			"// Example usage",
+			"Map.clearAllObjects();"
+		]
+	},
+	"HELP: Map.getTile": {
+		"prefix": "?Map.getTile",
+		"body": [
+			"/**",
+			" * A method of ScriptMap, that returns the enum value of the tile at the specific coordinates of the corresponding layer.",
+			" * @param {number} layerID - The value corresponding to the layer. / 0: Floor, 1: Wall, 2: TileEffect, 3: Object, 5: TopObject",
+			" * @param {number} x - The x coordinate of the tile.",
+			" * @param {number} y - The y coordinate of the tile.",
+			" * @return {(number|object)} - If the layerID is one of '0, 1, 2', the return type is 'number'. If the layerID is one of '3, 5', the return type is 'object'.",
+			" */",
+			"",
+			"// Example usage",
+			"let layerID = 2;",
+			"let x = 10;",
+			"let y = 10;",
+			"let result = Map.getTile(layerID, x, y);"
+		]
+	},
+	"HELP: Map.hasLocation": {
+		"prefix": "?Map.hasLocation",
+		"body": [
+			"/**",
+			" * A method of ScriptMap, that returns a boolean indicating whether a location with the specified name exists on the 'map'.",
+			" * @param {string} locationName - The name of the location to find.",
+			" * @return {boolean} - Returns true if the location exists on the 'map', false otherwise.",
+			" */",
+			"",
+			"// Example usage",
+			"let locationName = 'myLoaction';",
+			"let hasMyLocation = Map.hasLocation(locationName);"
+		]
+	},
+	"HELP: Map.getObjectsByType": {
+		"prefix": "?Map.getObjectsByType",
+		"body": [
+			"/**",
+			" * A method of ScriptMap, that returns a list of editor-placed objects on the 'map' that correspond to the specified type.",
+			" * @param {number} type - The type of objects to return.",
+			" * 0: NONE, 1: SHOW_NOTE, 2: SHOW_IMAGE, 3: PASSWORD_DOOR, 4: LINK_WEBSITE, 5: EMBED_WEBSITE,",
+			" * 6: API_CALL, 7: REPLACE_IMAGE, 8: NFT_GIVEAWAY, 9: NFT_DOOR, 10: POST_MESSAGE,",
+			" * 11: SHOW_CHAT_BALLOON, 12: FT_DOOR, 13: POST_MESSAGE_TO_APP, 14: DONATION_DOOR, 15: IMPASSABLE,",
+			" * 16: INTERACTION_WITH_ZEPSCRIPTS, 17: TOKEN_DONATION_DOOR, 18: CHANGE_OBJECT, 19: ANIMATION,",
+			" * 20: NFT_DOOR_MOVE, 21: INTERACTION_WITH_ZEPSCRIPTS, 22: MULTIPLE_CHOICE",
+			" * @return {Array.<object>} - An array of objects that match the specified type.",
+			" */",
+			"",
+			"// Example usage",
+			"let type = 2;",
+			"let list = Map.getObjectsByType(type);"
+		]
+	},
+	"HELP: Map.getTopObjectsByType": {
+		"prefix": "?Map.getTopObjectsByType",
+		"body": [
+			"/**",
+			" * A method of ScriptMap, that returns a list of editor-placed top-objects on the 'map' that correspond to the specified type.",
+			" * @param {number} type - The type of objects to return.",
+			" * 0: NONE, 1: SHOW_NOTE, 2: SHOW_IMAGE, 3: PASSWORD_DOOR, 4: LINK_WEBSITE, 5: EMBED_WEBSITE,",
+			" * 6: API_CALL, 7: REPLACE_IMAGE, 8: NFT_GIVEAWAY, 9: NFT_DOOR, 10: POST_MESSAGE,",
+			" * 11: SHOW_CHAT_BALLOON, 12: FT_DOOR, 13: POST_MESSAGE_TO_APP, 14: DONATION_DOOR, 15: IMPASSABLE,",
+			" * 16: INTERACTION_WITH_ZEPSCRIPTS, 17: TOKEN_DONATION_DOOR, 18: CHANGE_OBJECT, 19: ANIMATION,",
+			" * 20: NFT_DOOR_MOVE, 21: INTERACTION_WITH_ZEPSCRIPTS, 22: MULTIPLE_CHOICE",
+			" * @return {Array.<object>} - An array of objects that match the specified type.",
+			" */",
+			"",
+			"// Example usage",
+			"let type = 2;",
+			"let list = Map.getTopObjectsByType(type);"
+		]
+	}
+}
