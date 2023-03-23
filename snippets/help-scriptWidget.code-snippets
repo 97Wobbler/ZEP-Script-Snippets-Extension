@@ -1,7 +1,7 @@
 {
 	// ScriptWidget - Event Listeners
 	"widget.onMessage": {
-		"prefix": "helpwidget.onMessage",
+		"prefix": "?widget.onMessage",
 		"body": [
 			"/**",
 			" * A method of ScriptWidget, to set a function that executes when messages sent from widget are received on the 'app'.",
@@ -27,7 +27,7 @@
 	},
 	// ScriptWidget - Methods
 	"widget.sendMessage": {
-		"prefix": "helpwidget.sendMessage",
+		"prefix": "?widget.sendMessage",
 		"body": [
 			"/**",
 			" * A method of ScriptWidget, to send data to the widget from the 'app'.",
@@ -40,7 +40,7 @@
 		]
 	},
 	"widget.destroy": {
-		"prefix": "helpwidget.destroy",
+		"prefix": "?widget.destroy",
 		"body": [
 			"/**",
 			" * A method of ScriptWidget, to close the widget.",
